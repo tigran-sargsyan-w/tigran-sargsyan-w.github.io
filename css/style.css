@@ -80,6 +80,9 @@ body {
   right: 0;
   z-index: 20;
   background: var(--bg-primary);
+  border-bottom: 2px solid var(--bg-secondary);
+  width: 80%;
+  margin: 0 auto;
 }
 
 .navbar .container {
@@ -158,10 +161,22 @@ body {
 
 .division {
   width: 100%;
-  height: 2px;
+  height: 5px;
   background-color: var(--card-background);
-  margin: 5.5rem 0;
 }
+
+/* About me */
+#about-me {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto 5rem;
+}
+
+#about-me .btn {
+  align-self: center;
+  margin: 2rem 0;
+}
+
 /* Projects */
 #projects {
   display: flex;
@@ -180,6 +195,21 @@ body {
   grid-auto-rows: minmax(250px, auto);
   grid-gap: 0.9rem;
 }
+.project-horizontal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 0.9rem;
+  grid-auto-flow: row;
+}
+
+/*.project-horizontal {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); !* Позволяет колонкам автоматически заполнять доступное пространство, каждая имеет минимальную ширину 250px *!
+  grid-auto-rows: minmax(200px, auto); !* Минимальная высота строки 200px *!
+  grid-gap: 0.9rem; !* Расстояние между элементами *!
+  grid-auto-flow: row; !* Это устанавливает направление грида в ряд *!
+}*/
 
 .card .project-bio p {
   font-size: 0.83rem;
@@ -203,6 +233,24 @@ body {
   justify-content: flex-end;
   position: relative;
   top: 160px;
+  left: 10px;
+}
+
+.project-bio-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  top: 160px;
+  left: 10px;
+}
+
+.project-bio-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  top: 410px;
   left: 10px;
 }
 
@@ -253,6 +301,10 @@ body {
   .project {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .project-horizontal {
+    display: grid;
+    grid-template-columns: repeat(1, 0.5fr);
   }
 }
 
@@ -326,9 +378,442 @@ body {
     display: grid;
     grid-template-columns: 1fr;
   }
+  .project-horizontal {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
 
   .header-container .btn {
     border-radius: 5px;
     width: 80%;
   }
 }
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-container img {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pdf-page {
+  margin-top: 20px;
+  border: 1px solid black;
+  display: block;
+}
+
+.download-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    border-radius: 5px;
+    width: 80%;
+	display: flex;
+    align-items: center;
+}
+
+.profile-container img {
+    margin-right: 10px; /* Добавляем небольшой отступ между изображением и текстом */
+}
+
+.contacts-container {
+	width: 80%;
+  text-align: center;
+	margin: 0 auto;
+}
+
+.icon-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icon-with-text {
+  display: flex;
+  align-items: center;
+}
+
+.icon-grid a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+[data-theme="dark"] .icon-grid a {
+  color: #fff; /* Цвет текста в темной теме */
+}
+
+[data-theme="light"] .icon-grid a {
+  color: #000; /* Цвет текста в светлой теме */
+}
+
+
+.icon-grid a:hover {
+  opacity: 0.6;
+}
+
+.fa {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px; /* Добавляем небольшой отступ между иконкой и текстом */
+}
+
+.fab {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px; /* Добавляем небольшой отступ между иконкой и текстом */
+}
+
+.fas {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px; /* Добавляем небольшой отступ между иконкой и текстом */
+}
+
+.icon-grid span {
+  font-size: 18px; /* Размер шрифта текста */
+}
+
+.link-text{
+  opacity: 0.6;
+}
+
+.link-text:hover {
+  color: red; /* Замените на цвет, который вы хотите использовать при наведении */
+}
+
+/*timeline*/
+
+body{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clearfix{ clear:both; }
+
+.timeline{
+  position: relative;
+  width: 1000px;
+  box-sizing: border-box;
+  margin: 50px auto;
+  padding: 40px;
+}
+.timeline::before{
+  content:'';
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #c5c5c5;
+}
+.timeline ul{
+  margin: 0;
+  padding: 0;
+}
+.timeline ul li{
+  position: relative;
+  width: 50%;
+  list-style: none;
+  box-sizing: border-box;
+  padding: 20px 50px;
+}
+.timeline ul li:nth-child(odd){
+  float: left;
+  text-align: right;
+  clear: both;
+}
+.timeline ul li:nth-child(odd) .time h4,
+.timeline ul li:nth-child(even) .time h4{
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.timeline ul li:nth-child(even){
+  float: right;
+  text-align: left;
+  clear: both;
+}
+.content{
+  padding-bottom: 20px;
+}
+.timeline ul li:nth-child(odd)::before{
+  content:'';
+  position: absolute;
+  top: 24px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  background: rgba(76, 76, 76);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.47);
+}
+.timeline ul li:nth-child(even)::before{
+  content:'';
+  position: absolute;
+  top: 24px;
+  left: -8px;
+  width: 18px;
+  height: 18px;
+  background: rgba(76, 76, 76);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.47);
+}
+.timeline ul li h3{
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: rgba(76, 76, 76);
+}
+.timeline ul li p{
+  margin: 10px 0 0;
+  padding: 0;
+}
+.timeline ul li:nth-child(odd) .time{
+  position: absolute;
+  top: 12px;
+  right: -210px;
+  margin: 0;
+  padding: 8px 16px;
+  background: rgb(76, 76, 76);
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.47);
+}
+.timeline ul li:nth-child(even) .time{
+  position: absolute;
+  top: 12px;
+  left: -210px;
+  margin: 0;
+  padding: 8px 16px;
+  background: rgba(76, 76, 76);
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.47);
+}
+h1{
+  text-align: center;
+  font-size: 60px;
+}
+
+@media (max-width:1000px){
+  .timeline{
+    width: 100%;
+  }
+}
+
+@media (max-width:767px){
+  h1{
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+  }
+  .timeline{
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .timeline::before{
+    top: 0;
+    left: 20px;
+  }
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even){
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd)::before,
+  .timeline ul li:nth-child(even)::before{
+    top: -18px;
+    left: -24px;
+  }
+  .timeline ul li:nth-child(odd) .time,
+  .timeline ul li:nth-child(even) .time{
+    top: -30px;
+    left: 15px;
+    right: inherit;
+  }
+}
+
+/*Skills*/
+
+.skills {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1000px;
+  padding: 20px;
+  /*border: 1px solid #ddd;*/
+  border-radius: 10px;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills .programming-dev, .skills .project-management, .skills .sysadmin, .skills .it-infrastructure, .skills .communication {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.skills .programming-dev h3, .skills .project-management h3, .skills .sysadmin h3, .skills .it-infrastructure h3, .skills .communication h3 {
+  margin-bottom: 10px;
+}
+
+.skills .programming-dev ul, .skills .project-management ul, .skills .sysadmin ul, .skills .it-infrastructure ul, .skills .communication ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills .programming-dev li, .skills .project-management li, .skills .sysadmin li, .skills .it-infrastructure li, .skills .communication li {
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/*Languages*/
+
+.skill-bar {
+  display: flex;
+  flex-direction: column; /* Размещаем элементы в столбец */
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between; /* Равномерно распределяем элементы по контейнеру */
+  margin-top: 5px; /* Отступ сверху для названия языка */
+}
+
+.skill-name {
+  font-weight: bold;
+}
+
+.skill-level {
+  margin-left: 10px; /* Отступ между названием и уровнем владения */
+}
+
+.skill-progress {
+  width: 100%; /* Ширина прогресс-бара занимает всю доступную ширину */
+  height: 10px; /* Высота прогресс-бара */
+  background-color: #ddd; /* Цвет фона прогресс-бара */
+  border-radius: 5px; /* Скругление углов прогресс-бара */
+  margin-top: 5px; /* Отступ между уровнем владения и прогресс-баром */
+}
+
+.skill-level-bar {
+  height: 100%; /* Прогресс-бар заполняет всю высоту родительского контейнера */
+  background-color: rgba(76, 76, 76);
+  border-right: 1px solid #000000;
+  border-radius: 5px; /* Скругление углов прогресс-бара */
+}
+
+/*Certificates*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #ffffff;
+  background: rgba(76, 76, 76, 0.8);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #ffffff;
+  background: rgba(76, 76, 76, 0.8);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@keyframes fade {
+  from {opacity: .2}
+  to {opacity: 1}
+}
+
+/*taza*/
