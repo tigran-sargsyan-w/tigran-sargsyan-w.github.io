@@ -81,7 +81,7 @@ body {
   z-index: 20;
   background: var(--bg-primary);
   border-bottom: 2px solid var(--bg-secondary);
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -403,6 +403,8 @@ body {
   margin-top: 20px;
   border: 1px solid black;
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .download-container{
