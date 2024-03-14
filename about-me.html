@@ -464,27 +464,48 @@
         <h2>Certificates</h2>
         <p>Check out some of my certificates</p>
     </div>
+    <!--By adding a new certificate, do not forget to add it in Slider script/const certificates-->
     <!--Slider script-->
     <script>
+        /* Certificates */
+        const certificates = [
+            { title: "AR Development Techniques - Basic Concepts", imageSrc: "certificates/AR_Development_Techniques_01_Basic_Concepts.jpg" },
+            { title: "AR Development Techniques - Lighting and Physics", imageSrc: "certificates/AR_Development_Techniques_02_Lighting_and_Physics.jpg" },
+            { title: "AR Development Techniques - Recognition and Tracking", imageSrc: "certificates/AR_Development_Techniques_03_Recognition_and_Tracking.jpg" },
+            { title: "AR Development Techniques - Advanced Techniques", imageSrc: "certificates/AR_Development_Techniques_04_Advanced_Techniques.jpg" },
+            { title: "AR Visualization - Basic Concepts", imageSrc: "certificates/AR_Visualization_01_Basic_Concepts.jpg" },
+            { title: "AR Visualization - Basic Interactivity", imageSrc: "certificates/AR_Visualization_02_Basic_Interactivity.jpg" },
+            { title: "AR Visualization - Complex Interactivity", imageSrc: "certificates/AR_Visualization_03_Complex_Interactivity.jpg" },
+            { title: "Async Programming in C", imageSrc: "certificates/Async_Programming_in_C.jpg" },
+            { title: "Asynchronous Programming in C", imageSrc: "certificates/Asynchronous_Programming_in_C.jpg" },
+            { title: "C Advanced Practices", imageSrc: "certificates/C_Advanced_Practices.jpg" },
+            { title: "C Best Practices for Developers", imageSrc: "certificates/C_Best_Practices_for_Developers.jpg" },
+            { title: "C Design Patterns Part 1", imageSrc: "certificates/C_Design_Patterns_Part_1.jpg" },
+            { title: "C Design Patterns Part 2", imageSrc: "certificates/C_Design_Patterns_Part_2.jpg" },
+            { title: "C for Unity Game Development", imageSrc: "certificates/C_for_Unity_Game_Development.jpg" },
+            { title: "Shader", imageSrc: "certificates/Shader.jpg" },
+            { title: "Unity and Vuforia: Trying on Watches in Augmented Reality", imageSrc: "certificates/Unity_and_Vuforia_Trying_on_Watches_in_Augmented_Reality.jpg" }
+        ];
+
         let slideIndex = 1;
         let intervalId;
 
         function startCarousel() {
-            intervalId = setInterval(function () {
-                plusSlides(1);
-            }, 4000); // Change image every 4 seconds
+            if (document.getElementsByClassName("mySlides").length > 0) {
+                intervalId = setInterval(function () {
+                    plusSlides(1);
+                }, 4000); // Change image every 4 seconds
+            }
         }
 
         function stopCarousel() {
             clearInterval(intervalId);
         }
 
-        // Next/previous controls
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
 
-        // Thumbnail image controls
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
@@ -492,156 +513,60 @@
         function showSlides(n) {
             let i;
             let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
+            let dotsContainer = document.getElementById("dots-container");
 
-            if (slides.length === 0 || dots.length === 0) {
+            if (slides.length === 0 || !dotsContainer) {
                 return;
             }
             if (n > slides.length) {
-                slideIndex = 1
+                slideIndex = 1;
             }
             if (n < 1) {
-                slideIndex = slides.length
+                slideIndex = slides.length;
             }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+            for (i = 0; i < dotsContainer.children.length; i++) {
+                dotsContainer.children[i].className = dotsContainer.children[i].className.replace(" active", "");
             }
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+            dotsContainer.children[slideIndex - 1].className += " active";
         }
 
         document.addEventListener("DOMContentLoaded", function () {
+            generateSlides();
             startCarousel();
         });
-    </script>
-    <!--By adding a new certificate, do not forget to add it to the dots/circles under certificates section-->
-    <!-- Slideshow container / Certificates -->
-    <div class="slideshow-container">
-        <!-- Full-width images with number and caption text -->
-        <!-- certificate_1 -->
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 16</div>
-            <img src="certificates/AR_Development_Techniques_01_Basic_Concepts.jpg" style="width:100%">
-            <div class="text">AR Development Techniques - Basic Concepts</div>
-        </div>
-        <!-- certificate_2 -->
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 16</div>
-            <img src="certificates/AR_Development_Techniques_02_Lighting_and_Physics.jpg" style="width:100%">
-            <div class="text">AR Development Techniques - Lighting and Physics</div>
-        </div>
-        <!-- certificate_3 -->
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 16</div>
-            <img src="certificates/AR_Development_Techniques_03_Recognition_and_Tracking.jpg" style="width:100%">
-            <div class="text">AR Development Techniques - Recognition and Tracking</div>
-        </div>
-        <!-- certificate_4 -->
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 16</div>
-            <img src="certificates/AR_Development_Techniques_04_Advanced_Techniques.jpg" style="width:100%">
-            <div class="text">AR Development Techniques - Advanced Techniques</div>
-        </div>
-        <!-- certificate_5 -->
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 16</div>
-            <img src="certificates/AR_Visualization_01_Basic_Concepts.jpg" style="width:100%">
-            <div class="text">AR Visualization - Basic Concepts</div>
-        </div>
-        <!-- certificate_6 -->
-        <div class="mySlides fade">
-            <div class="numbertext">6 / 16</div>
-            <img src="certificates/AR_Visualization_02_Basic_Interactivity.jpg" style="width:100%">
-            <div class="text">AR Visualization - Basic Interactivity</div>
-        </div>
-        <!-- certificate_7 -->
-        <div class="mySlides fade">
-            <div class="numbertext">7 / 16</div>
-            <img src="certificates/AR_Visualization_03_Complex_Interactivity.jpg" style="width:100%">
-            <div class="text">AR Visualization - Complex Interactivity</div>
-        </div>
-        <!-- certificate_8 -->
-        <div class="mySlides fade">
-            <div class="numbertext">8 / 16</div>
-            <img src="certificates/Async_Programming_in_C.jpg" style="width:100%">
-            <div class="text">Async Programming in C#</div>
-        </div>
-        <!-- certificate_9 -->
-        <div class="mySlides fade">
-            <div class="numbertext">9 / 16</div>
-            <img src="certificates/Asynchronous_Programming_in_C.jpg" style="width:100%">
-            <div class="text">Asynchronous Programming in C#</div>
-        </div>
-        <!-- certificate_10 -->
-        <div class="mySlides fade">
-            <div class="numbertext">10 / 16</div>
-            <img src="certificates/C_Advanced_Practices.jpg" style="width:100%">
-            <div class="text">C# Advanced Practices</div>
-        </div>
-        <!-- certificate_11 -->
-        <div class="mySlides fade">
-            <div class="numbertext">11 / 16</div>
-            <img src="certificates/C_Best_Practices_for_Developers.jpg" style="width:100%">
-            <div class="text">C# Best Practices for Developers</div>
-        </div>
-        <!-- certificate_12 -->
-        <div class="mySlides fade">
-            <div class="numbertext">12 / 16</div>
-            <img src="certificates/C_Design_Patterns_Part_1.jpg" style="width:100%">
-            <div class="text">C# Design Patterns - Part 1</div>
-        </div>
-        <!-- certificate_13 -->
-        <div class="mySlides fade">
-            <div class="numbertext">13 / 16</div>
-            <img src="certificates/C_Design_Patterns_Part_2.jpg" style="width:100%">
-            <div class="text">C# Design Patterns - Part 2</div>
-        </div>
-        <!-- certificate_14 -->
-        <div class="mySlides fade">
-            <div class="numbertext">14 / 16</div>
-            <img src="certificates/C_for_Unity_Game_Development.jpg" style="width:100%">
-            <div class="text">C# for Unity Game Development</div>
-        </div>
-        <!-- certificate_15 -->
-        <div class="mySlides fade">
-            <div class="numbertext">15 / 16</div>
-            <img src="certificates/Shader.jpg" style="width:100%">
-            <div class="text">Shader Programming</div>
-        </div>
-        <!-- certificate_16 -->
-        <div class="mySlides fade">
-            <div class="numbertext">16 / 16</div>
-            <img src="certificates/Unity_and_Vuforia_Trying_on_Watches_in_Augmented_Reality.jpg" style="width:100%">
-            <div class="text">Unity and Vuforia - Trying on Watches in Augmented Reality</div>
-        </div>
 
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="stopCarousel();plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="stopCarousel();plusSlides(1)">&#10095;</a>
-    </div>
+        function generateSlides() {
+            let slidesHtml = "";
+            let dotsHtml = "";
+            certificates.forEach((certificate, index) => {
+                const slideNumber = index + 1;
+                slidesHtml += `
+                <div class="mySlides fade">
+                    <div class="numbertext">${slideNumber} / ${certificates.length}</div>
+                    <img src="${certificate.imageSrc}" style="width:100%">
+                    <div class="text">${certificate.title}</div>
+                </div>
+            `;
+                dotsHtml += `<span class="dot" onclick="currentSlide(${slideNumber})"></span>`;
+            });
+
+            document.querySelector(".slideshow-container").innerHTML = slidesHtml +
+                `<!-- Next and previous buttons -->
+                <a class="prev" onclick="stopCarousel(); plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="stopCarousel(); plusSlides(1)">&#10095;</a>`;
+            document.getElementById("dots-container").innerHTML = dotsHtml;
+            showSlides(1); // Показываем первый слайд после генерации
+        }
+    </script>
+    <!-- Slideshow container / Certificates -->
+    <div class="slideshow-container"></div>
     <br>
     <!-- The dots/circles under certificates -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-        <span class="dot" onclick="currentSlide(10)"></span>
-        <span class="dot" onclick="currentSlide(11)"></span>
-        <span class="dot" onclick="currentSlide(12)"></span>
-        <span class="dot" onclick="currentSlide(13)"></span>
-        <span class="dot" onclick="currentSlide(14)"></span>
-        <span class="dot" onclick="currentSlide(15)"></span>
-        <span class="dot" onclick="currentSlide(16)"></span>
-    </div>
+    <div id="dots-container" style="text-align:center"></div>
 </section>
 
 <!-- Hobby -->
