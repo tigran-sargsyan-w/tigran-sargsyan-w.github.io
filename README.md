@@ -21,6 +21,8 @@
     </div>
 </section>
 <section id="skills">
+<details >
+<summary style="font-size: large; font-weight: bold;">Skills</summary>
 <div  style="text-align: center;">
 <h3 align="center">Programming & Development</h3>
 <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" alt="Unity badge">
@@ -55,6 +57,7 @@
 <img src="https://img.shields.io/badge/Research%20skills-4c9e62?style=for-the-badge" alt="Research skills badge">
 <img src="https://img.shields.io/badge/Multilingualism-b85939?style=for-the-badge" alt="Multilingualism badge">
 </div>
+</details>
 </section>
 <section id="hobby">
 <div style="margin-top: 20px">
