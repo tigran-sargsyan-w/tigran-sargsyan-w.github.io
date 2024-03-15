@@ -23,7 +23,7 @@
 </section>
 <section id="skills">
 <details >
-<summary style="font-size: large; font-weight: bold;">Skills</summary>
+<summary style="font-size: large; font-weight: bold;">Skills&#128104;&#8205;&#128187;</summary>
 <div  style="text-align: center;">
 <h3 align="center">Programming & Development</h3>
 <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" alt="Unity badge">
