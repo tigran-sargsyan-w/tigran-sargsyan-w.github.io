@@ -2,6 +2,9 @@
     <div style="text-align: center;margin-left: 40px;margin-right: 40px">
         <h1 align="center">Hi I'm Tigran</h1>
         <p align="center">
+          <img src="assets/banner/coding_from_anywhere.gif" alt="banner" width="20%">
+        </p>
+        <p align="center">
             Passionate Software developer, adept in the art of crafting both, game and non-game programs, mechanics, etc., 
             blending programming prowess with design principles seamlessly. Fluent in C# and Unity, 
             with an unwavering commitment to keeping pace with the latest industry advancements. 
@@ -17,17 +20,15 @@
         <a href="https://tigran-sargsyan-w.github.io/" target="_blank">
         <img align="center" src="https://img.shields.io/badge/More%20about%20me-4d4d4d?style=for-the-badge" alt="More about me badge">
          </a>
-        <h4></h4>
     </div>
 </section>
 <section id="skills">
-<details >
-<summary style="font-size: large; font-weight: bold;">Skills&#128104;&#8205;&#128187;</summary>
 <div  style="text-align: center;">
 <h3 align="center">Programming & Development</h3>
 <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" alt="Unity badge">
 <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C# badge">
 <img src="https://img.shields.io/badge/git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git badge">
+<img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C badge">
 <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android badge">
 <img src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin badge">
 <img src="https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio badge">
@@ -57,7 +58,6 @@
 <img src="https://img.shields.io/badge/Research%20skills-4c9e62?style=for-the-badge" alt="Research skills badge">
 <img src="https://img.shields.io/badge/Multilingualism-b85939?style=for-the-badge" alt="Multilingualism badge">
 </div>
-</details>
 </section>
 <section id="hobby">
 <div style="margin-top: 20px">
