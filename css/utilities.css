@@ -103,6 +103,24 @@ h2::selection {
   max-width: 700px;
 }
 
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  font-weight: var(--weight-semibold);
+  font-size: 0.75rem;
+  color: var(--bg-secondary);
+}
+
+.lead {
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+.section-cta {
+  text-align: center;
+  margin: 1.5rem auto 0.5rem;
+}
+
 /* Project cards */
 .card {
   padding: 1rem;
@@ -134,6 +152,17 @@ h2::selection {
 
 .card:hover .project-info {
   opacity: 1;
+}
+
+.btn-ghost {
+  border: 2px solid var(--bg-secondary);
+  color: var(--bg-secondary);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--bg-secondary);
+  color: var(--bg-primary);
 }
 
 /* Project Images */
