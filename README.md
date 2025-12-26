@@ -1,18 +1,11 @@
-<section id="about-me">
+<section id="about-me" align="center">
     <div style="text-align: center;margin-left: 40px;margin-right: 40px">
         <h1 align="center">Hi I'm Tigran</h1>
         <p align="center">
           <img src="assets/banner/coding_from_anywhere.gif" alt="banner" width="20%">
         </p>
         <p align="center">
-            Passionate Software developer, adept in the art of crafting both, game and non-game programs, mechanics, etc., 
-            blending programming prowess with design principles seamlessly. Fluent in C# and Unity, 
-            with an unwavering commitment to keeping pace with the latest industry advancements. 
-            A collaborative spirit, equipped with communication skills, devoted to delivering immersive, 
-            high-quality experiences that captivate and engage audiences. 
-            Possessing a keen eye for detail and a penchant for innovation, I strive to push the boundaries of interactive experiences,
-            ensuring each project is not only technically sound but also artistically compelling. 
-            Committed to fostering a culture of creativity and excellence, I thrive in dynamic team environments where ideas flourish and visions become reality.
+            Software developer focused on Unity/C# — gameplay systems, tooling, and performance. I also develop non-game applications across different platforms and technologies. I care about clean architecture, reusable packages, and pragmatic engineering choices that scale. I aim to ship polished projects that feel great to use and are easy to maintain.
         </p>
         <p align="center" style="text-align: center;margin-bottom: 10px;margin-top: 10px">
             If you want to know more about me, click the button below.
@@ -22,16 +15,18 @@
          </a>
     </div>
 </section>
-<section id="skills">
+<section id="skills" align="center">
 <div  style="text-align: center;">
 <h3 align="center">Programming & Development</h3>
 <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white" alt="Unity badge">
 <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C# badge">
 <img src="https://img.shields.io/badge/git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git badge">
 <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C badge">
+<img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++ badge">
+<img src="https://img.shields.io/badge/Make-1D6F42?style=for-the-badge&logo=gnu&logoColor=white" alt="Make badge">
+<img src="https://img.shields.io/badge/Shaders-5586A4?style=for-the-badge&logo=opengl&logoColor=white" alt="Shaders badge">
 <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android badge">
 <img src="https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin badge">
-<img src="https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white" alt="Android Studio badge">
 <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" alt=".NET badge">
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python badge">
 <img src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Shell Script badge">
@@ -83,7 +78,7 @@
         Whether it's landscapes, portraits, or street photography, I find joy in documenting the world around me.&#128247;</p>
 </div>
 </section>
-<section id="contacts">
+<section id="contacts" align="center">
     <div style="text-align: center;margin-left: 40px;margin-right: 40px">
         <h2 align="center">Contacts</h2>
         <p>
