@@ -144,126 +144,10 @@
         <h2>Skills</h2>
         <p>Check out some of my skills</p>
         <section class="skills">
-            <!--Programming skills section-->
-            <div class="programming-dev">
-                <h3>Programming & Development</h3>
-                <ul>
-                    <li>Unity</li>
-                    <li>C#</li>
-                    <li>Git</li>
-                    <li>Augmented Reality (AR)</li>
-                    <li>Mobile game programming</li>
-                    <li>Unity Custom Editor</li>
-                    <li>Game programming</li>
-                    <li>Integrating SDK</li>
-                    <li>SOLID</li>
-                    <li>Object-Oriented programming (OOP)</li>
-                    <li>Design Patterns (GoF)</li>
-                    <li>Algorithms</li>
-                    <li>Data Structures</li>
-                    <li>Kotlin</li>
-                    <li>Android development</li>
-                    <li>Android studio</li>
-                    <li>.NET</li>
-                    <li>Python</li>
-                    <li>Bash</li>
-                    <li>Web development</li>
-                    <li>Software Engineering</li>
-                </ul>
-            </div>
-            <!--Management skills section-->
-            <div class="project-management">
-                <h3>Project & Team Management</h3>
-                <ul>
-                    <li>Tactical & Strategic thinking</li>
-                    <li>Team Management</li>
-                    <li>Leadership</li>
-                    <li>Problem-solving</li>
-                    <li>Situation analysis</li>
-                    <li>Organization Skills</li>
-                    <li>Planning</li>
-                </ul>
-            </div>
-            <!--SysAdmin skills section-->
-            <div class="sysadmin">
-                <h3>System Administration & Management & IT Infrastructure</h3>
-                <ul>
-                    <li>System administration (Linux & Windows)</li>
-                    <li>Server administration</li>
-                    <li>Network administration</li>
-                    <li>Linux</li>
-                    <li>Windows</li>
-                    <li>System monitoring</li>
-                    <li>Network monitoring</li>
-                    <li>Virtualization</li>
-                </ul>
-            </div>
-            <!--Communication skills section-->
-            <div class="communication">
-                <h3>Interpersonal & Communication Skills</h3>
-                <ul>
-                    <li>Communication</li>
-                    <li>Cross-cultural competence</li>
-                    <li>Negotiation & Conflict resolution</li>
-                    <li>Analytical thinking</li>
-                    <li>Strategic planning</li>
-                    <li>Adaptability</li>
-                    <li>Research skills</li>
-                    <li>Multilingualism</li>
-                </ul>
-            </div>
-            <!--Languages-->
+            <ul id="skills-categories-container" class="skills-categories-list"></ul>
+
             <h3 style="text-align: start">Languages</h3>
-            <!--Language 1-->
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <div class="skill-name">Armenian</div>
-                    <div class="skill-level">Native or bilingual proficiency</div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-level-bar" style="width: 100%;"></div>
-                </div>
-            </div>
-            <!--Language 2-->
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <div class="skill-name">Russian</div>
-                    <div class="skill-level">Native or bilingual proficiency</div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-level-bar" style="width: 95%;"></div>
-                </div>
-            </div>
-            <!--Language 3-->
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <div class="skill-name">German</div>
-                    <div class="skill-level">Limited working proficiency</div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-level-bar" style="width: 65%;"></div>
-                </div>
-            </div>
-            <!--Language 4-->
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <div class="skill-name">English</div>
-                    <div class="skill-level">Limited working proficiency</div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-level-bar" style="width: 60%;"></div>
-                </div>
-            </div>
-            <!--Language 5-->
-            <div class="skill-bar">
-                <div class="skill-info">
-                    <div class="skill-name">French</div>
-                    <div class="skill-level">Elementary proficiency</div>
-                </div>
-                <div class="skill-progress">
-                    <div class="skill-level-bar" style="width: 15%;"></div>
-                </div>
-            </div>
+            <ul id="languages-container" class="languages-list"></ul>
         </section>
     </div>
 </section>
@@ -466,6 +350,7 @@
 <script src="js/script.js"></script>
 <script src="js/loadEducation.js"></script>
 <script src="js/loadExperience.js"></script>
+<script src="js/loadSkills.js"></script>
 <script>document.addEventListener("DOMContentLoaded", function () {
     showSlides(slideIndex);
 });
