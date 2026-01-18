@@ -1,3 +1,4 @@
+(() => {
 const EXPERIENCE_ENDPOINT = 'data/experience.json';
 
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -139,3 +140,4 @@ document.addEventListener('DOMContentLoaded', () => {
       container.textContent = 'Unable to load experience at this time.';
     });
 });
+})();

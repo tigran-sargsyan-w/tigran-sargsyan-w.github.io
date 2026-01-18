@@ -78,46 +78,49 @@ var isGameProjectsExpanded = false;
 var isNonGameProjectsExpanded = false;
 
 var gamingProjectsSection = document.getElementById("game-projects");
-var gamingProjectCards = gamingProjectsSection.querySelectorAll('.card');
 var showMoreGamingBtn = document.getElementById('show-more-gaming-btn');
+var gamingProjectCards = gamingProjectsSection ? gamingProjectsSection.querySelectorAll('.card') : [];
 
 var nonGamingProjectsSection = document.getElementById("non-game-projects");
-var nonGamingProjectCards = nonGamingProjectsSection.querySelectorAll('.card');
 var showMoreNonGamingBtn = document.getElementById('show-more-non-gaming-btn');
+var nonGamingProjectCards = nonGamingProjectsSection ? nonGamingProjectsSection.querySelectorAll('.card') : [];
 
-showMoreGamingBtn.addEventListener('click', function() {
-  isGameProjectsExpanded = !isGameProjectsExpanded;
+if (showMoreGamingBtn && gamingProjectsSection) {
+  showMoreGamingBtn.addEventListener('click', function() {
+    isGameProjectsExpanded = !isGameProjectsExpanded;
 
-  gamingProjectCards.forEach(function(project) {
-    // Показываем или скрываем проекты в зависимости от состояния кнопки
-    if (isGameProjectsExpanded) {
-      project.classList.remove('hidden');
-      showMoreGamingBtn.innerHTML = 'Show Less <i class="fas fa-arrow-right"></i>';
-    } else {
-      // Скрываем проекты, кроме первых трех
-      if (!project.classList.contains('initial')) {
-        project.classList.add('hidden');
+    gamingProjectCards.forEach(function(project) {
+      // Показываем или скрываем проекты в зависимости от состояния кнопки
+      if (isGameProjectsExpanded) {
+        project.classList.remove('hidden');
+        showMoreGamingBtn.innerHTML = 'Show Less <i class="fas fa-arrow-right"></i>';
+      } else {
+        // Скрываем проекты, кроме первых трех
+        if (!project.classList.contains('initial')) {
+          project.classList.add('hidden');
+        }
+        showMoreGamingBtn.innerHTML = 'Show More <i class="fas fa-arrow-right"></i>';
       }
-      showMoreGamingBtn.innerHTML = 'Show More <i class="fas fa-arrow-right"></i>';
-    }
+    });
   });
-});
+}
 
-showMoreNonGamingBtn.addEventListener('click', function() {
-  isNonGameProjectsExpanded = !isNonGameProjectsExpanded;
+if (showMoreNonGamingBtn && nonGamingProjectsSection) {
+  showMoreNonGamingBtn.addEventListener('click', function() {
+    isNonGameProjectsExpanded = !isNonGameProjectsExpanded;
 
-  nonGamingProjectCards.forEach(function(project) {
-    // Показываем или скрываем проекты в зависимости от состояния кнопки
-    if (isNonGameProjectsExpanded) {
-      project.classList.remove('hidden');
-      showMoreNonGamingBtn.innerHTML = 'Show Less <i class="fas fa-arrow-right"></i>';
-    } else {
-      // Скрываем проекты, кроме первых трех
-      if (!project.classList.contains('initial')) {
-        project.classList.add('hidden');
+    nonGamingProjectCards.forEach(function(project) {
+      // Показываем или скрываем проекты в зависимости от состояния кнопки
+      if (isNonGameProjectsExpanded) {
+        project.classList.remove('hidden');
+        showMoreNonGamingBtn.innerHTML = 'Show Less <i class="fas fa-arrow-right"></i>';
+      } else {
+        // Скрываем проекты, кроме первых трех
+        if (!project.classList.contains('initial')) {
+          project.classList.add('hidden');
+        }
+        showMoreNonGamingBtn.innerHTML = 'Show More <i class="fas fa-arrow-right"></i>';
       }
-      showMoreNonGamingBtn.innerHTML = 'Show More <i class="fas fa-arrow-right"></i>';
-    }
+    });
   });
-});
-
+}

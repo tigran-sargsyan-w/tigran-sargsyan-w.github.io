@@ -1,3 +1,4 @@
+(() => {
 const EDUCATION_ENDPOINT = 'data/education.json';
 
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -116,3 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
       container.textContent = 'Unable to load education at this time.';
     });
 });
+})();
