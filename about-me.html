@@ -114,71 +114,7 @@
     <section class="project-container container" id="timeline-my">
         <div class="content-text">
             <div class="timeline">
-                <ul>
-                    <!--Education 1-->
-                    <li>
-                        <div class="content">
-                            <h3>MoD RA University</h3>
-                            <h4>Bachelor's degree</h4>
-                            <h4>Units Management</h4>
-                            <p>&#8226; I pursued a bachelor's degree in military science, with a focus on various
-                                aspects of strategy, tactics, and leadership.</p>
-                            <p>&#8226; My specialization within military science included combat operations, military
-                                technology, and defense policy.</p>
-                            <p>&#8226; I engaged in practical training exercises, simulations, and fieldwork to apply
-                                theoretical knowledge to real-world scenarios.</p>
-                            <p>&#8226; I conducted research and analysis on military topics, culminating in a thesis
-                                project and participation in smaller research initiatives.</p>
-                            <p>&#8226; Additionally, I developed skills in leadership, decision-making under pressure,
-                                teamwork, and effective communication, all essential for success in military
-                                settings.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Jul 2014 - Jun 2019</h4>
-                        </div>
-                    </li>
-                    <!--Education 2-->
-                    <li>
-                        <div class="content">
-                            <h3>Yerevan State University</h3>
-                            <h4>Master's degree</h4>
-                            <h4>International relations</h4>
-                            <p>&#8226; Pursued a postgraduate degree in diplomacy, focusing on international relations,
-                                foreign policy.</p>
-                            <p>&#8226; My area of specialization within the field of diplomacy was conflict resolution,
-                                economic/cultural/public diplomacy.</p>
-                            <p>&#8226; Conducted research and analysis, which involved writing a thesis or dissertation
-                                and engaging in smaller research projects.</p>
-                            <p>&#8226; Also developed skills in critical thinking, problem-solving, communication,
-                                negotiation.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Jun 2019 - Feb 2022 </h4>
-                        </div>
-                    </li>
-                    <!--Education 3-->
-                    <li>
-                        <div class="content">
-                            <h3>National Polytechnic University of Armenia</h3>
-                            <h4>Master's degree</h4>
-                            <h4>Information Technology</h4>
-                            <p>&#8226; Pursuing a postgraduate degree in Information Technology, focusing on software
-                                development, data analysis, cybersecurity,information systems, networks, computing and
-                                software developing.</p>
-                            <p>&#8226; Specializing in various aspects of IT, including software engineering, database
-                                management, and network security.</p>
-                            <p>&#8226; Learning technologies and additional skills in programming,ds, algorithms, os,
-                                mobile developingdatabase management, cybersecurity, data analysis,system architecture,
-                                network administration and project management.</p>
-                            <p>&#8226; Developing skills in programming, problem-solving, project management, and
-                                teamwork.</p>
-                        </div>
-                        <div class="time">
-                            <h4>Sep 2022 - Jan 2025</h4>
-                        </div>
-                    </li>
-                    <div class="clearfix"></div>
-                </ul>
+                <ul id="education-container" class="education-list"></ul>
             </div>
         </div>
     </section>
@@ -528,6 +464,7 @@
 
 <!-- Scripts -->
 <script src="js/script.js"></script>
+<script src="js/loadEducation.js"></script>
 <script src="js/loadExperience.js"></script>
 <script>document.addEventListener("DOMContentLoaded", function () {
     showSlides(slideIndex);
