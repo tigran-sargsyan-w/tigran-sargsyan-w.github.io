@@ -648,6 +648,24 @@ h1{
   }
 }
 
+.experience-list{
+  margin: 0;
+  padding: 0;
+}
+
+.experience-item{
+  list-style: none;
+}
+
+.experience-duration{
+  text-align: center;
+  margin: 0;
+}
+
+.experience-tasks p{
+  margin: 10px 0 0;
+}
+
 /*Skills*/
 
 .skills {
@@ -657,6 +675,17 @@ h1{
   padding: 20px;
   /*border: 1px solid #ddd;*/
   border-radius: 10px;
+}
+
+.skills-categories-list,
+.languages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-category-item {
+  list-style: none;
 }
 
 .skills h2 {
