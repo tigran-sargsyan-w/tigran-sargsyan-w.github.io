@@ -79,11 +79,19 @@ var isNonGameProjectsExpanded = false;
 
 var gamingProjectsSection = document.getElementById("game-projects");
 var showMoreGamingBtn = document.getElementById('show-more-gaming-btn');
-var gamingProjectCards = gamingProjectsSection ? gamingProjectsSection.querySelectorAll('.card') : [];
+var gamingProjectCards = [];
+
+if (gamingProjectsSection) {
+  gamingProjectCards = gamingProjectsSection.querySelectorAll('.card');
+}
 
 var nonGamingProjectsSection = document.getElementById("non-game-projects");
 var showMoreNonGamingBtn = document.getElementById('show-more-non-gaming-btn');
-var nonGamingProjectCards = nonGamingProjectsSection ? nonGamingProjectsSection.querySelectorAll('.card') : [];
+var nonGamingProjectCards = [];
+
+if (nonGamingProjectsSection) {
+  nonGamingProjectCards = nonGamingProjectsSection.querySelectorAll('.card');
+}
 
 if (showMoreGamingBtn && gamingProjectsSection) {
   showMoreGamingBtn.addEventListener('click', function() {
