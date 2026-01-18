@@ -677,6 +677,17 @@ h1{
   border-radius: 10px;
 }
 
+.skills-categories-list,
+.languages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-category-item {
+  list-style: none;
+}
+
 .skills h2 {
   text-align: center;
   margin-bottom: 20px;

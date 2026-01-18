@@ -1,6 +1,7 @@
+(() => {
 const EDUCATION_ENDPOINT = 'data/education.json';
 
-const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const EDUCATION_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const formatMonthYear = (value) => {
   if (!value) {
@@ -16,7 +17,7 @@ const formatMonthYear = (value) => {
     return value;
   }
 
-  return `${MONTH_NAMES[month - 1]} ${year}`;
+  return `${EDUCATION_MONTH_NAMES[month - 1]} ${year}`;
 };
 
 const renderEducation = (items, container) => {
@@ -116,3 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
       container.textContent = 'Unable to load education at this time.';
     });
 });
+})();

@@ -1,6 +1,7 @@
+(() => {
 const EXPERIENCE_ENDPOINT = 'data/experience.json';
 
-const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const EXPERIENCE_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const formatMonthYear = (value) => {
   if (!value) {
@@ -16,7 +17,7 @@ const formatMonthYear = (value) => {
     return value;
   }
 
-  return `${MONTH_NAMES[month - 1]} ${year}`;
+  return `${EXPERIENCE_MONTH_NAMES[month - 1]} ${year}`;
 };
 
 const parseYearMonth = (value) => {
@@ -139,3 +140,4 @@ document.addEventListener('DOMContentLoaded', () => {
       container.textContent = 'Unable to load experience at this time.';
     });
 });
+})();
