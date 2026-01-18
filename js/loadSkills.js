@@ -1,4 +1,4 @@
-const SKILLS_ENDPOINT = 'data/skills.json';
+const SKILLS_ENDPOINT = '/data/skills.json';
 
 const CATEGORY_CLASS_NAMES = [
   'programming-dev',

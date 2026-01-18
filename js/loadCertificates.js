@@ -13,7 +13,7 @@ async function initCertificatesCarousel() {
     let certificates = [];
 
     try {
-        const response = await fetch("data/certificates.json");
+        const response = await fetch("/data/certificates.json");
         if (!response.ok) {
             throw new Error(`Failed to load certificates: ${response.status}`);
         }
