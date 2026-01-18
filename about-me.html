@@ -191,198 +191,10 @@
     <div class="content-text">
         <h2>Experience</h2>
         <p>Check out my experience</p>
-        <script>
-            function calculateMonthsWorked(startMonth, startYear, endMonth, endYear) {
-                var monthsWorked = 0;
-
-                // Проверка на корректность данных
-                if (startYear > endYear || (startYear === endYear && startMonth > endMonth)) {
-                    return "Ошибка: Начальная дата позже конечной";
-                }
-
-                // Рассчитываем количество месяцев
-                monthsWorked = (endYear - startYear) * 12 + (endMonth - startMonth) + 1;
-
-                // Если количество месяцев больше 12, выводим количество лет и оставшихся месяцев
-                if (monthsWorked > 12) {
-                    var years = Math.floor(monthsWorked / 12);
-                    var remainingMonths = monthsWorked % 12;
-                    return years + " year " + remainingMonths + " months";
-                }
-                return monthsWorked + " months";
-            }
-        </script>
         <section class="project-container container" id="timeline-mys">
             <div class="content-text">
                 <div class="timeline">
-                    <ul>
-                        <!--Experience 1-->
-                        <li>
-                            <div class="content">
-                                <h3>Master-Student</h3>
-                                <h4>Yerevan State University</h4>
-                                <p>&#8226; Pursued a postgraduate degree in diplomacy, focusing on international
-                                    relations, foreign policy</p>
-                                <p>&#8226; My area of specialization within the field of diplomacy was conflict
-                                    resolution, economic/cultural/public diplomacy</p>
-                                <p>&#8226; Conducted research and analysis, which involved writing a thesis or
-                                    dissertation and engaging in smaller research projects.</p>
-                                <p>&#8226; Also developed skills in critical thinking, problem-solving, communication,
-                                    negotiation</p>
-                            </div>
-                            <div class="time">
-                                <h4>Apr 2019 - Jan 2022</h4>
-                                <h5 style="text-align: center">
-                                    <script>
-                                        var monthsWorked = calculateMonthsWorked(4, 2019, 1, 2022);
-                                        document.write("( " + monthsWorked + " )");
-                                    </script>
-                                </h5>
-                            </div>
-                        </li>
-                        <!--Experience 2-->
-                        <li>
-                            <div class="content">
-                                <h3>Linux Specialist</h3>
-                                <h4>Arm</h4>
-                                <p>&#8226; Gained a deep understanding of Unix-based operating system
-                                    fundamentals,network protocols,
-                                    services, and security concepts, access control, authentication, encryption, and
-                                    vulnerability
-                                    management</p>
-                                <p>&#8226; Learned how to configure, manage, and maintain Linux/Windows systems,
-                                    including installation,
-                                    patching, updating, and monitoring, how to deploy and manage Unix-based and Windows
-                                    virtual
-                                    machines</p>
-                                <p>&#8226; Developed skills in shell scripting to automate tasks, including manipulating
-                                    files, parsing text, and
-                                    scheduling jobs.</p>
-                                <p>&#8226; Developed collaboration skills to work effectively with team members,
-                                    communicate technical
-                                    information, and document my work.</p>
-                            </div>
-                            <div class="time">
-                                <h4>May 2021 - Jan 2022</h4>
-                                <h5 style="text-align: center">
-                                    <script>
-                                        var monthsWorked = calculateMonthsWorked(5, 2021, 1, 2022);
-                                        document.write("( " + monthsWorked + " )");
-                                    </script>
-                                </h5>
-                            </div>
-                        </li>
-                        <!--Experience 3-->
-                        <li>
-                            <div class="content">
-                                <h3>Unity Developer</h3>
-                                <h4>Freelance</h4>
-                                <p>&#8226; Developed and maintained Unity-based games for clients</p>
-                                <p>&#8226; Design game mechanics, and implement features using Unity and C# for mobile
-                                    devices.</p>
-                                <p>&#8226; Testing and debugging of game mechanics</p>
-                            </div>
-                            <div class="time">
-                                <h4>Jan 2022 - Jun 2022</h4>
-                                <h5 style="text-align: center">
-                                    <script>
-                                        var monthsWorked = calculateMonthsWorked(1, 2022, 6, 2022);
-                                        document.write("( " + monthsWorked + " )");
-                                    </script>
-                                </h5>
-                            </div>
-                        </li>
-                        <!--Experience 4-->
-                        <li>
-                            <div class="content">
-                                <h3>Software Engineer</h3>
-                                <h4>Balaganov Rocks</h4>
-                                <p>&#8226; Designed and implemented interactive 3D environments, games or simulations
-                                    using Unity game
-                                    engine and programming language C#</p>
-                                <p>&#8226; Implemented game mechanics, physics, user interfaces, and other features
-                                    using Unity's built-in tools
-                                    and frameworks, as well as custom scripts and plugins.</p>
-                                <p>&#8226; Optimized game performance and user experience by implementing efficient
-                                    code, designing intuitive
-                                    UI, and integrating third-party libraries and services.</p>
-                                <p>&#8226; Troubleshot and debugged issues related to game logic, physics, networking,
-                                    input, and other areas,
-                                    using different debugging tools</p>
-                                <p>&#8226; Maintained code quality and consistency by following coding conventions</p>
-                            </div>
-                            <div class="time">
-                                <h4>Jul 2022 - Apr 2023</h4>
-                                <h5 style="text-align: center">
-                                    <script>
-                                        var monthsWorked = calculateMonthsWorked(7, 2022, 4, 2023);
-                                        document.write("( " + monthsWorked + " )");
-                                    </script>
-                                </h5>
-                            </div>
-                        </li>
-                        <!--Experience 5-->
-                        <li>
-                            <div class="content">
-                                <h3>Master-Student</h3>
-                                <h4>National Polytechnic University of Armenia</h4>
-                                <p>&#8226; Pursuing a postgraduate degree in Information Technology, focusing on
-                                    software development,
-                                    data analysis, cybersecurity,information systems, networks, computing and software
-                                    developing.</p>
-                                <p>&#8226; Specializing in various aspects of IT, including software engineering,
-                                    database management,
-                                    and network security.</p>
-                                <p>&#8226; Learning technologies and additional skills in programming,ds, algorithms,
-                                    os,
-                                    mobile developingdatabase management, cybersecurity, data analysis,system
-                                    architecture,
-                                    network administration and project management.</p>
-                                <p>&#8226; Developing skills in programming, problem-solving, project management, and
-                                    teamwork.</p>
-                            </div>
-                            <div class="time">
-                                <h4>Sep 2022 - Jan 2025</h4>
-                                <h5 style="text-align: center">
-                                    <script>
-                                        var currentDate = new Date();
-                                        var currentMonth = currentDate.getMonth() + 1;
-                                        var currentYear = currentDate.getFullYear();
-                                        var monthsWorked = calculateMonthsWorked(9, 2022, currentMonth, currentYear);
-                                        document.write("( " + monthsWorked + " )");
-                                    </script>
-                                </h5>
-                            </div>
-                        </li>
-                        <!--Experience 6-->
-                        <li>
-                            <div class="content">
-                                <h3>Unity Developer</h3>
-                                <h4>Freelance</h4>
-                                <p>&#8226; Collaborating with designers, artists, and other developers to designing and
-                                    developing Unity-based
-                                    applications and games</p>
-                                <p>&#8226; Staying up-to-date with the latest trends and advancements in Unity game
-                                    development.</p>
-                                <p>&#8226; Continuously improving my skills and knowledge in Unity game development by
-                                    attending training
-                                    sessions, online courses, and workshops</p>
-                            </div>
-                            <div class="time">
-                                <h4>Apr 2023 - Present</h4>
-                                <h5 style="text-align: center">
-                                    <script>
-                                        var currentDate = new Date();
-                                        var currentMonth = currentDate.getMonth() + 1;
-                                        var currentYear = currentDate.getFullYear();
-                                        var monthsWorked = calculateMonthsWorked(4, 2023, currentMonth, currentYear);
-                                        document.write("( " + monthsWorked + " )");
-                                    </script>
-                                </h5>
-                            </div>
-                        </li>
-                        <div class="clearfix"></div>
-                    </ul>
+                    <ul id="experience-container" class="experience-list"></ul>
                 </div>
             </div>
         </section>
@@ -716,11 +528,10 @@
 
 <!-- Scripts -->
 <script src="js/script.js"></script>
+<script src="js/loadExperience.js"></script>
 <script>document.addEventListener("DOMContentLoaded", function () {
     showSlides(slideIndex);
 });
 </script>
 </body>
 </html>
-
-
