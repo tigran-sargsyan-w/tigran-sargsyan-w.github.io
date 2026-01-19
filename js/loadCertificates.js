@@ -1,3 +1,4 @@
+const BASE_URL = document.documentElement?.dataset?.baseurl || "";
 document.addEventListener("DOMContentLoaded", () => {
     initCertificatesCarousel();
 });
@@ -13,7 +14,7 @@ async function initCertificatesCarousel() {
     let certificates = [];
 
     try {
-        const response = await fetch("/data/certificates.json");
+        const response = await fetch(`${BASE_URL}/data/certificates.json`);
         if (!response.ok) {
             throw new Error(`Failed to load certificates: ${response.status}`);
         }
