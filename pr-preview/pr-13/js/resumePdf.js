@@ -58,13 +58,48 @@
     }
   }
 
+    async function loadCvPdf() {
+    try {
+      const response = await fetch("CV/cv-files.json", { cache: "no-cache" });
+      if (!response.ok) {
+        throw new Error("Failed to load CV manifest");
+      }
+      const data = await response.json();
+      if (!data || !Array.isArray(data.files)) {
+        throw new Error("Invalid CV manifest");
+      }
+      const pdfFile = data.files.find((file) =>
+        typeof file === "string" ? file.toLowerCase().endsWith(".pdf") : false
+      );
+      if (!pdfFile) {
+        throw new Error("No PDF found in CV manifest");
+      }
+      return `CV/${pdfFile}`;
+    } catch (_) {
+      return "CV/CV-Tigran Sargsyan.pdf";
+    }
+  }
+
+  function updateDownloadLink(pdfUrl) {
+    const link = document.getElementById("pdfDownloadLink");
+    if (link) {
+      link.href = pdfUrl;
+    }
+  }
+
+
   document.addEventListener("DOMContentLoaded", function () {
-    renderPdfToContainer({
-      url: "CV/CV-Tigran Sargsyan.pdf",
-      containerId: "pdfContainer",
-      scale: 1.5,
-    }).catch(function () {
-      // Swallow errors to keep the rest of the page functional.
-    });
+    loadCvPdf()
+      .then(function (pdfUrl) {
+        updateDownloadLink(pdfUrl);
+        return renderPdfToContainer({
+          url: pdfUrl,
+          containerId: "pdfContainer",
+          scale: 1.5,
+        });
+      })
+      .catch(function () {
+        // Swallow errors to keep the rest of the page functional.
+      });
   });
 })();
