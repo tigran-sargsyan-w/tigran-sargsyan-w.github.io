@@ -1,4 +1,5 @@
-const SKILLS_ENDPOINT = '/data/skills.json';
+const BASE_URL = document.documentElement?.dataset?.baseurl || "";
+const SKILLS_ENDPOINT = `${BASE_URL}/data/skills.json`;
 
 const CATEGORY_CLASS_NAMES = [
   'programming-dev',

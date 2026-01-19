@@ -1,4 +1,5 @@
-const PROJECTS_DATA_URL = "/data/projects.json";
+const BASE_URL = document.documentElement?.dataset?.baseurl || "";
+const PROJECTS_DATA_URL = `${BASE_URL}/data/projects.json`;
 const FEATURED_TITLES = ["Gun Crusher", "Try Before Buy", "1124"];
 
 const buildProjectLink = (link) => {

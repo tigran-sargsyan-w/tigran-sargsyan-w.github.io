@@ -1,5 +1,6 @@
+const BASE_URL = document.documentElement?.dataset?.baseurl || "";
 (() => {
-const EXPERIENCE_ENDPOINT = '/data/experience.json';
+const EXPERIENCE_ENDPOINT = `${BASE_URL}/data/experience.json`;
 
 const EXPERIENCE_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
