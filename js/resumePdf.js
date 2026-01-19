@@ -58,7 +58,7 @@
     }
   }
 
-    async function loadCvPdf() {
+    async function loadCv() {
     try {
       const response = await fetch("CV/cv-files.json", { cache: "no-cache" });
       if (!response.ok) {
@@ -74,26 +74,41 @@
       if (!pdfFile) {
         throw new Error("No PDF found in CV manifest");
       }
-      return `CV/${pdfFile}`;
+      const docxFile = data.files.find((file) =>
+        typeof file === "string" ? file.toLowerCase().endsWith(".docx") : false
+      );
+      return {
+        pdfUrl: `CV/${pdfFile}`,
+        docxUrl: docxFile ? `CV/${docxFile}` : null,
+      };
     } catch (_) {
-      return "CV/CV-Tigran Sargsyan.pdf";
+      return {
+        pdfUrl: "CV/CV-Tigran Sargsyan.pdf",
+        docxUrl: "CV/CV-Tigran Sargsyan.docx",
+      };
     }
   }
 
-  function updateDownloadLink(pdfUrl) {
-    const link = document.getElementById("pdfDownloadLink");
-    if (link) {
-      link.href = pdfUrl;
+  function updateDownloadLinks(pdfUrl, docxUrl) {
+    const pdfLink = document.getElementById("pdfDownloadLink");
+    if (pdfLink) {
+      pdfLink.href = pdfUrl;
+    }
+    if (docxUrl) {
+      const docxLink = document.getElementById("docxDownloadLink");
+      if (docxLink) {
+        docxLink.href = docxUrl;
+      }
     }
   }
 
 
   document.addEventListener("DOMContentLoaded", function () {
-    loadCvPdf()
-      .then(function (pdfUrl) {
-        updateDownloadLink(pdfUrl);
+    loadCv()
+      .then(function (urls) {
+        updateDownloadLinks(urls.pdfUrl, urls.docxUrl);
         return renderPdfToContainer({
-          url: pdfUrl,
+          url: urls.pdfUrl,
           containerId: "pdfContainer",
           scale: 1.5,
         });
