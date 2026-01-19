@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
     <!-- Link -->
     <link href="assets/favicon/favicon.ico" rel="icon" type="image/x-icon"/>
     <link href="css/style.css" rel="stylesheet"/>
@@ -65,36 +65,7 @@
     <!--PDF Viewer-->
     <div class="division" style="width: 80%"></div>
     <div id="pdfContainer">
-        <canvas class="pdf-page" id="page1"></canvas>
-        <canvas class="pdf-page" id="page2"></canvas>
     </div>
-    <!--By Change CV, do not forget to change links-->
-    <!--Script for PDF read/show-->
-    <script>
-        var url = 'CV/CV-Tigran Sargsyan.pdf';
-        var pdfjsLib = window['pdfjs-dist/build/pdf'];
-
-        pdfjsLib.getDocument(url).promise.then(function (pdf) {
-            var totalPages = pdf.numPages;
-            for (let i = 1; i <= totalPages; i++) {
-                pdf.getPage(i).then(function (page) {
-                    var scale = 1.5;
-                    var viewport = page.getViewport({scale: scale});
-
-                    var canvas = document.getElementById('page' + i);
-                    var context = canvas.getContext('2d');
-                    canvas.height = viewport.height;
-                    canvas.width = viewport.width;
-
-                    var renderContext = {
-                        canvasContext: context,
-                        viewport: viewport
-                    };
-                    page.render(renderContext);
-                });
-            }
-        });
-    </script>
     <!--Downloader-->
     <div class="division" style="width: 80%"></div>
     <img id="download-icon" src="assets/download-light.png" style="width: 50px; height: 50px;"/>
@@ -143,5 +114,6 @@
 
 <!-- Scripts -->
 <script src="js/script.js"></script>
+<script defer src="js/resumePdf.js"></script>
 </body>
 </html>
