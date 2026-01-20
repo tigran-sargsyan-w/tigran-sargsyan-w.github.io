@@ -1,13 +1,13 @@
-(function () {
+(() => {
   "use strict";
 
-  function ensurePdfJs() {
+  const ensurePdfJs = () => {
     // pdf.js is loaded from CDN and attaches itself to window as `pdfjsLib`
     if (typeof window === "undefined") return null;
     return window["pdfjs-dist/build/pdf"] || window.pdfjsLib || null;
   }
 
-  function setWorkerSrc(lib) {
+  const setWorkerSrc = (lib) => {
     // Avoid "Setting up fake worker" by pointing to the CDN worker.
     // Must match the version used in resume.html
     try {
@@ -20,7 +20,7 @@
     }
   }
 
-  async function renderPdfToContainer({ url, containerId, scale }) {
+  const renderPdfToContainer = async ({ url, containerId, scale }) => {
     const container = document.getElementById(containerId);
     if (!container) return;
 
@@ -56,7 +56,7 @@
     }
   }
 
-    async function loadCv() {
+  const loadCv = async () => {
     try {
       const response = await fetch("data/cv-files.json", { cache: "no-cache" });
       if (!response.ok) {
@@ -85,7 +85,7 @@
     }
   }
 
-  function updateDownloadLinks(pdfUrl, docxUrl) {
+  const updateDownloadLinks = (pdfUrl, docxUrl) => {
     const pdfLink = document.getElementById("pdfDownloadLink");
     if (pdfLink) {
       pdfLink.href = pdfUrl;
@@ -99,9 +99,9 @@
   }
 
 
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", () => {
     loadCv()
-      .then(function (urls) {
+      .then((urls) => {
         if (!urls) {
           console.error("CV files could not be loaded");
           return;
@@ -113,7 +113,7 @@
           scale: 1.5,
         });
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.error("Error rendering PDF:", error);
       });
   });

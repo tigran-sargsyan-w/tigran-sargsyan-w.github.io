@@ -1,5 +1,7 @@
 (() => {
-const EXPERIENCE_ENDPOINT = 'data/experience.json';
+  "use strict";
+
+  const EXPERIENCE_ENDPOINT = 'data/experience.json';
 
 const EXPERIENCE_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 

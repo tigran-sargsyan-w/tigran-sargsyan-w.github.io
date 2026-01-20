@@ -1,8 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-    initCertificatesCarousel();
-});
+(() => {
+  "use strict";
 
-async function initCertificatesCarousel() {
+  document.addEventListener("DOMContentLoaded", () => {
+    initCertificatesCarousel();
+  });
+
+  async function initCertificatesCarousel() {
     const slideshowContainer = document.querySelector(".slideshow-container");
     const dotsContainer = document.getElementById("dots-container");
 
@@ -132,4 +135,5 @@ async function initCertificatesCarousel() {
 
     generateSlides();
     startCarousel();
-}
+  }
+})();
