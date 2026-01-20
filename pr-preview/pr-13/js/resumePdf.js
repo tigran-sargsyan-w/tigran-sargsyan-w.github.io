@@ -81,11 +81,9 @@
         pdfUrl: `CV/${pdfFile}`,
         docxUrl: docxFile ? `CV/${docxFile}` : null,
       };
-    } catch (_) {
-      return {
-        pdfUrl: "CV/CV-Tigran Sargsyan.pdf",
-        docxUrl: "CV/CV-Tigran Sargsyan.docx",
-      };
+    } catch (error) {
+      console.error("Failed to load CV files:", error);
+      return null;
     }
   }
 
@@ -106,6 +104,10 @@
   document.addEventListener("DOMContentLoaded", function () {
     loadCv()
       .then(function (urls) {
+        if (!urls) {
+          console.error("CV files could not be loaded");
+          return;
+        }
         updateDownloadLinks(urls.pdfUrl, urls.docxUrl);
         return renderPdfToContainer({
           url: urls.pdfUrl,
@@ -113,8 +115,8 @@
           scale: 1.5,
         });
       })
-      .catch(function () {
-        // Swallow errors to keep the rest of the page functional.
+      .catch(function (error) {
+        console.error("Error rendering PDF:", error);
       });
   });
 })();
