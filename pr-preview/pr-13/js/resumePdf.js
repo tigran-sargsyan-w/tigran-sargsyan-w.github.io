@@ -60,7 +60,7 @@
 
     async function loadCv() {
     try {
-      const response = await fetch("CV/cv-files.json", { cache: "no-cache" });
+      const response = await fetch("data/cv-files.json", { cache: "no-cache" });
       if (!response.ok) {
         throw new Error("Failed to load CV manifest");
       }
