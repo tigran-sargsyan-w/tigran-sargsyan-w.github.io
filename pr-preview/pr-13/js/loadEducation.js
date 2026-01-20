@@ -1,5 +1,7 @@
 (() => {
-const EDUCATION_ENDPOINT = 'data/education.json';
+  "use strict";
+
+  const EDUCATION_ENDPOINT = 'data/education.json';
 
 const EDUCATION_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
