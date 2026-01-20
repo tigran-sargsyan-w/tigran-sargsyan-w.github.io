@@ -1,13 +1,16 @@
-const SKILLS_ENDPOINT = 'data/skills.json';
+(() => {
+  "use strict";
 
-const CATEGORY_CLASS_NAMES = [
-  'programming-dev',
-  'project-management',
-  'sysadmin',
-  'communication',
-];
+  const SKILLS_ENDPOINT = 'data/skills.json';
 
-const createCategoryItem = (category, index) => {
+  const CATEGORY_CLASS_NAMES = [
+    'programming-dev',
+    'project-management',
+    'sysadmin',
+    'communication',
+  ];
+
+  const createCategoryItem = (category, index) => {
   const listItem = document.createElement('li');
   listItem.classList.add('skills-category-item');
 
@@ -119,3 +122,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 });
+})();

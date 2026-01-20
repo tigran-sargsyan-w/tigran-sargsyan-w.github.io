@@ -1,7 +1,10 @@
-const PROJECTS_DATA_URL = "data/projects.json";
-const FEATURED_TITLES = ["Gun Crusher", "Try Before Buy", "1124"];
+(() => {
+  "use strict";
 
-const buildProjectLink = (link) => {
+  const PROJECTS_DATA_URL = "data/projects.json";
+  const FEATURED_TITLES = ["Gun Crusher", "Try Before Buy", "1124"];
+
+  const buildProjectLink = (link) => {
   const anchor = document.createElement("a");
   anchor.href = link.url;
   anchor.target = "_blank";
@@ -111,3 +114,4 @@ const loadIndexProjects = async () => {
 };
 
 loadIndexProjects();
+})();
