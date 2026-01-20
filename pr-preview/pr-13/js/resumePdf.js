@@ -1,5 +1,3 @@
-/* global pdfjsLib */
-
 (function () {
   "use strict";
 
