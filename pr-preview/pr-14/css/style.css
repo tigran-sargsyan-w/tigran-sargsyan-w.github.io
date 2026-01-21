@@ -115,6 +115,29 @@ body {
   margin-right: 1.5rem;
 }
 
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.5rem;
+}
+
+.language-switcher .language-btn {
+  border: 1px solid var(--bg-secondary);
+  background: transparent;
+  color: var(--text-primary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: var(--weight-semibold);
+}
+
+.language-switcher .language-btn:hover,
+.language-switcher .language-btn:focus {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
 .fas.fa-arrow-right {
   margin-left: 0.5rem;
   font-size: 0.9rem;
@@ -342,6 +365,12 @@ body {
   .nav-menu li {
     margin-bottom: 0.5rem;
     width: 100%;
+  }
+
+  .language-switcher {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 0;
   }
 
   .nav-menu .btn {
