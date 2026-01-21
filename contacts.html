@@ -15,7 +15,7 @@
     <!--Title-->
     <title>Tigran Sargsyan - Contacts</title>
 </head>
-<body>
+<body data-page="contacts">
 <header id="hero">
     <!-- Navbar -->
     <nav class="navbar">
@@ -28,11 +28,17 @@
             </h1>
             <!-- Navbar links -->
             <ul class="nav-menu">
-                <li><a class="nav-link" href="about-me">ABOUT ME</a></li>
-                <li><a class="nav-link" href="projects">PROJECTS</a></li>
-                <li><a class="nav-link" href="contacts">CONTACTS</a></li>
-                <li><a class="nav-link btn btn-primary" href="resume">RESUME <i
+                <li><a class="nav-link" data-i18n="nav.about" href="about-me">ABOUT ME</a></li>
+                <li><a class="nav-link" data-i18n="nav.projects" href="projects">PROJECTS</a></li>
+                <li><a class="nav-link" data-i18n="nav.contacts" href="contacts">CONTACTS</a></li>
+                <li><a class="nav-link btn btn-primary" href="resume"><span data-i18n="nav.resume">RESUME</span> <i
                         class="far fa-hand-point-right"></i></a>
+                </li>
+
+                <li class="lang-switch">
+                    <button class="lang-btn" data-i18n="lang.en" onclick="setLanguage('en')" type="button">English</button>
+                    <button class="lang-btn" data-i18n="lang.fr" onclick="setLanguage('fr')" type="button">French</button>
+                    <button class="lang-btn" data-i18n="lang.ru" onclick="setLanguage('ru')" type="button">Russian</button>
                 </li>
 
                 <!-- Toggle switch -->
@@ -150,5 +156,6 @@
 
 <!-- Scripts -->
 <script defer src="js/script.js"></script>
+<script defer src="js/i18n.js"></script>
 </body>
 </html>
