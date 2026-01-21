@@ -16,7 +16,7 @@
         let certificates = [];
 
         try {
-            const response = await fetch("data/certificates.json");
+            const response = await fetch(`data/${window.APP_LANG || 'en'}/certificates.json`);
             if (!response.ok) {
                 throw new Error(`Failed to load certificates: ${response.status}`);
             }

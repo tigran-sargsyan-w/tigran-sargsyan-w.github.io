@@ -1,7 +1,7 @@
 (() => {
     "use strict";
 
-    const PROJECTS_DATA_URL = "data/projects.json";
+    const PROJECTS_DATA_URL = `data/${window.APP_LANG || 'en'}/projects.json`;
 
     const buildProjectLink = (link) => {
         const anchor = document.createElement("a");
