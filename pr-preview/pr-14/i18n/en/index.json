@@ -1,0 +1,10 @@
+{
+  "index": {
+    "greetingTitle": "Hi I'm Tigran",
+    "projectsTitle": "Projects",
+    "contactsTitle": "Contacts",
+    "moreAboutMeBtn": "More about me",
+    "allProjectsBtn": "All Projects",
+    "allContactsBtn": "All contacts"
+  }
+}
