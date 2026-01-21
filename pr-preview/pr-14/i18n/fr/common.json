@@ -1,1 +1,8 @@
-{}
+{
+  "nav": {
+    "about": "À propos",
+    "projects": "Projets",
+    "contacts": "Contacts",
+    "resume": "CV"
+  }
+}

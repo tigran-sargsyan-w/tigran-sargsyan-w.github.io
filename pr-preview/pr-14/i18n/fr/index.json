@@ -1,1 +1,9 @@
-{}
+{
+  "index": {
+    "projectsTitle": "Projets",
+    "contactsTitle": "Contacts",
+    "moreAboutMeBtn": "En savoir plus sur moi",
+    "allProjectsBtn": "Tous les projets",
+    "allContactsBtn": "Tous les contacts"
+  }
+}
