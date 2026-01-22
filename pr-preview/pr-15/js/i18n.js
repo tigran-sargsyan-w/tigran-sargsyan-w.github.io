@@ -61,6 +61,14 @@
 
     console.info("[i18n] loaded keys", Object.keys(dict).length);
 
+    const titleEl = document.querySelector("title[data-i18n]");
+    if (titleEl) {
+      const titleKey = titleEl.dataset.i18n;
+      if (typeof dict[titleKey] === "string") {
+        titleEl.textContent = dict[titleKey];
+      }
+    }
+
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.dataset.i18n;
       if (typeof dict[key] === "string") {
