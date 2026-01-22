@@ -612,7 +612,7 @@ body{
 .timeline ul li:nth-child(odd) .time{
   position: absolute;
   top: 12px;
-  right: -210px;
+  right: -230px;
   margin: 0;
   padding: 8px 16px;
   background: rgb(76, 76, 76);
@@ -623,7 +623,7 @@ body{
 .timeline ul li:nth-child(even) .time{
   position: absolute;
   top: 12px;
-  left: -210px;
+  left: -230px;
   margin: 0;
   padding: 8px 16px;
   background: rgba(76, 76, 76);
