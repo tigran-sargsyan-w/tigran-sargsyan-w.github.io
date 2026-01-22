@@ -3,23 +3,52 @@
 
     const lang = window.APP_LANG || 'en';
     const EDUCATION_ENDPOINT = `data/${lang}/education.json`;
-    const EDUCATION_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const PRESENT_LABELS = {
+        en: 'Present',
+        fr: 'Présent',
+        ru: 'Наст. время',
+    };
+
+    const getLocaleFromLang = () => {
+        const currentLang = window.APP_LANG || 'en';
+        const localeMap = {
+            en: 'en',
+            fr: 'fr',
+            ru: 'ru',
+        };
+
+        return localeMap[currentLang] || 'en';
+    };
 
     const formatMonthYear = (value) => {
         if (!value) {
             return '';
         }
 
-        if (value.toLowerCase() === 'present') {
-            return 'Present';
+        if (typeof value === 'string' && value.toLowerCase() === 'present') {
+            return PRESENT_LABELS[window.APP_LANG || 'en'] || PRESENT_LABELS.en;
         }
 
-        const [year, month] = value.split('-').map(Number);
-        if (!year || !month) {
+        if (typeof value !== 'string') {
             return value;
         }
 
-        return `${EDUCATION_MONTH_NAMES[month - 1]} ${year}`;
+        const match = value.match(/^(\d{4})-(\d{2})$/);
+        if (!match) {
+            return value;
+        }
+
+        const year = Number(match[1]);
+        const month = Number(match[2]);
+        if (!year || month < 1 || month > 12) {
+            return value;
+        }
+
+        const date = new Date(year, month - 1, 1);
+        return new Intl.DateTimeFormat(getLocaleFromLang(), {
+            month: 'short',
+            year: 'numeric',
+        }).format(date);
     };
 
     const renderEducation = (items, container) => {

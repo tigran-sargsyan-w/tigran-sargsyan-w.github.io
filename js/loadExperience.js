@@ -3,23 +3,54 @@
 
     const lang = window.APP_LANG || 'en';
     const EXPERIENCE_ENDPOINT = `data/${lang}/experience.json`;
-    const EXPERIENCE_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const PRESENT_LABELS = {
+        en: 'Present',
+        fr: 'Présent',
+        ru: 'Наст. время',
+    };
+
+    const getLocaleFromLang = () => {
+        const currentLang = window.APP_LANG || 'en';
+        const localeMap = {
+            en: 'en',
+            fr: 'fr',
+            ru: 'ru',
+        };
+
+        return localeMap[currentLang] || 'en';
+    };
+
+    const isPresentValue = (value) => typeof value === 'string' && value.toLowerCase() === 'present';
 
     const formatMonthYear = (value) => {
         if (!value) {
             return '';
         }
 
-        if (value.toLowerCase() === 'present') {
-            return 'Present';
+        if (isPresentValue(value)) {
+            return PRESENT_LABELS[window.APP_LANG || 'en'] || PRESENT_LABELS.en;
         }
 
-        const [year, month] = value.split('-').map(Number);
-        if (!year || !month) {
+        if (typeof value !== 'string') {
             return value;
         }
 
-        return `${EXPERIENCE_MONTH_NAMES[month - 1]} ${year}`;
+        const match = value.match(/^(\d{4})-(\d{2})$/);
+        if (!match) {
+            return value;
+        }
+
+        const year = Number(match[1]);
+        const month = Number(match[2]);
+        if (!year || month < 1 || month > 12) {
+            return value;
+        }
+
+        const date = new Date(year, month - 1, 1);
+        return new Intl.DateTimeFormat(getLocaleFromLang(), {
+            month: 'short',
+            year: 'numeric',
+        }).format(date);
     };
 
     const parseYearMonth = (value) => {
@@ -29,7 +60,7 @@
 
     const calculateMonthsWorked = (startValue, endValue) => {
         const start = parseYearMonth(startValue);
-        const end = endValue.toLowerCase() === 'present'
+        const end = isPresentValue(endValue)
             ? {
                 year: new Date().getFullYear(),
                 month: new Date().getMonth() + 1,
