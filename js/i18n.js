@@ -26,6 +26,7 @@
   window.setLanguage = setLang;
 
   const lang = getLang();
+  window.APP_LANG = lang;
   const page = document.body?.dataset?.page || "index";
   document.documentElement.lang = lang;
   console.info("[i18n] lang=", lang, "page=", page);

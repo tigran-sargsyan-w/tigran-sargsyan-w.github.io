@@ -1,7 +1,8 @@
 (() => {
     "use strict";
 
-    const EDUCATION_ENDPOINT = 'data/education.json';
+    const lang = window.APP_LANG || 'en';
+    const EDUCATION_ENDPOINT = `data/${lang}/education.json`;
     const EDUCATION_MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     const formatMonthYear = (value) => {
