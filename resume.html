@@ -14,9 +14,9 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!--Title-->
-    <title>Tigran Sargsyan - CV</title>
+    <title data-i18n="resume.pageTitle">Tigran Sargsyan - CV</title>
 </head>
-<body>
+<body data-page="resume">
 <header id="hero">
     <!-- Navbar -->
     <nav class="navbar">
@@ -29,11 +29,17 @@
             </h1>
             <!-- Navbar links -->
             <ul class="nav-menu">
-                <li><a class="nav-link" href="about-me">ABOUT ME</a></li>
-                <li><a class="nav-link" href="projects">PROJECTS</a></li>
-                <li><a class="nav-link" href="contacts">CONTACTS</a></li>
-                <li><a class="nav-link btn btn-primary" href="resume">RESUME <i
+                <li><a class="nav-link" data-i18n="nav.about" href="about-me">ABOUT ME</a></li>
+                <li><a class="nav-link" data-i18n="nav.projects" href="projects">PROJECTS</a></li>
+                <li><a class="nav-link" data-i18n="nav.contacts" href="contacts">CONTACTS</a></li>
+                <li><a class="nav-link btn btn-primary" href="resume"><span data-i18n="nav.resume">RESUME</span> <i
                         class="far fa-hand-point-right"></i></a>
+                </li>
+
+                <li class="lang-switch">
+                    <button class="lang-btn" data-i18n="lang.en" onclick="setLanguage('en')" type="button">English</button>
+                    <button class="lang-btn" data-i18n="lang.fr" onclick="setLanguage('fr')" type="button">French</button>
+                    <button class="lang-btn" data-i18n="lang.ru" onclick="setLanguage('ru')" type="button">Russian</button>
                 </li>
 
                 <!-- Toggle switch -->
@@ -58,8 +64,8 @@
 <!--CV-->
 <section class="header-container">
     <div class="content-text">
-        <h2>Curriculum Vitae (CV)</h2>
-        <p>Check out my comprehensive CV below or
+        <h2 data-i18n="resume.title">Curriculum Vitae (CV)</h2>
+        <p data-i18n="resume.description">Check out my comprehensive CV below or
             download it for a detailed overview of my professional background and skills</p>
     </div>
     <!--PDF Viewer-->
@@ -69,7 +75,7 @@
     <!--Downloader-->
     <div class="division" style="width: 80%"></div>
     <img id="download-icon" src="assets/download-light.png" style="width: 50px; height: 50px;"/>
-    <p class="download-container">Download formats</p>
+    <p class="download-container" data-i18n="resume.downloadLabel">Download formats</p>
     <!--Links for download format-->
     <div class="icon-container">
         <a download href="CV/CV-Tigran Sargsyan.pdf" id="pdfDownloadLink">
@@ -108,12 +114,13 @@
                         width="150px"/></a>
         </div>
         <p> &copy; Tigran Sargsyan <span id="datee"></span></p>
-        <p>All content and trademarks property of their respective owners.</p>
+        <p data-i18n="footer.trademarks">All content and trademarks property of their respective owners.</p>
     </div>
 </footer>
 
 <!-- Scripts -->
 <script defer src="js/script.js"></script>
+<script defer src="js/i18n.js"></script>
 <script defer src="js/resumePdf.js"></script>
 </body>
 </html>
