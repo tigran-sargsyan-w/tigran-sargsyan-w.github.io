@@ -13,8 +13,9 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!--Title-->
-    <title>Tigran Sargsyan - About me</title>
+    <title data-i18n="about-me.title">Tigran Sargsyan - About me</title>
 </head>
+<body data-page="about-me">
 <header id="hero">
     <!-- Navbar -->
     <nav class="navbar">
@@ -27,11 +28,17 @@
             </h1>
             <!-- Navbar links -->
             <ul class="nav-menu">
-                <li><a class="nav-link" href="about-me">ABOUT ME</a></li>
-                <li><a class="nav-link" href="projects">PROJECTS</a></li>
-                <li><a class="nav-link" href="contacts">CONTACTS</a></li>
-                <li><a class="nav-link btn btn-primary" href="resume">RESUME <i
+                <li><a class="nav-link" data-i18n="nav.about" href="about-me">ABOUT ME</a></li>
+                <li><a class="nav-link" data-i18n="nav.projects" href="projects">PROJECTS</a></li>
+                <li><a class="nav-link" data-i18n="nav.contacts" href="contacts">CONTACTS</a></li>
+                <li><a class="nav-link btn btn-primary" href="resume"><span data-i18n="nav.resume">RESUME</span> <i
                         class="far fa-hand-point-right"></i></a>
+                </li>
+
+                <li class="lang-switch">
+                    <button class="lang-btn" data-i18n="lang.en" onclick="setLanguage('en')" type="button">English</button>
+                    <button class="lang-btn" data-i18n="lang.fr" onclick="setLanguage('fr')" type="button">French</button>
+                    <button class="lang-btn" data-i18n="lang.ru" onclick="setLanguage('ru')" type="button">Russian</button>
                 </li>
 
                 <!-- Toggle switch -->
@@ -62,7 +69,7 @@
                 src="assets/profile/profile-image.png"
         />
         <div class="text-container">
-            <h3 style="text-align: justify;">Passionate Software Developer with a strong focus on creating immersive and
+            <h3 data-i18n="about-me.headerIntro" style="text-align: justify;">Passionate Software Developer with a strong focus on creating immersive and
                 engaging experiences using Unity. Expertise in game mechanics, programming, and design principles.
                 Proficient in C# and Unity, with a commitment to staying current with industry advancements.
                 Experienced in developing various software applications across different domains,
@@ -76,31 +83,31 @@
 <section class="project-container container" id="about">
     <div class="division"></div>
     <div class="content-text">
-        <h2>About me</h2>
-        <p>Check out some of my personal information</p>
+        <h2 data-i18n="about-me.aboutTitle">About me</h2>
+        <p data-i18n="about-me.aboutSubtitle">Check out some of my personal information</p>
     </div>
     <div class="text-container">
-        <p style="text-align: justify;">&emsp;&emsp;Hi there! My name is Tigran.
+        <p data-i18n="about-me.aboutText1" style="text-align: justify;">&emsp;&emsp;Hi there! My name is Tigran.
             I'm 27 years old and originally from Armenia, but currently residing in Villeurbanne, Auvergne-Rhône-Alpes,
             France.
             I specialize in Unity game development and have experience working as a freelancer and in various companies.
             I hold a Master's degree in Information Technology, as well as a Master's degree in Diplomacy
             and hold a Bachelor's degree in Units Management.</p>
 
-        <p>&emsp;&emsp;Alongside being a passionate Unity game developer, particularly focused on gameplay programming,
+        <p data-i18n="about-me.aboutText2">&emsp;&emsp;Alongside being a passionate Unity game developer, particularly focused on gameplay programming,
             I enjoy discussing, designing, and developing applications and games in general.</p>
 
-        <p>&emsp;&emsp;I've worked on a variety of <a class="link-text" href="projects">game projects</a>, both for
+        <p>&emsp;&emsp;<span data-i18n="about-me.aboutText3a">I've worked on a variety of </span><a class="link-text" data-i18n="about-me.aboutText3LinkGame" href="projects">game projects</a><span data-i18n="about-me.aboutText3b">, both for
             release,
             for showcasing Unity capabilities, and for experimental purposes, as well as
-            <a class="link-text" href="projects">non-gaming projects</a> where I've found certain technological
+            </span><a class="link-text" data-i18n="about-me.aboutText3LinkNonGame" href="projects">non-gaming projects</a><span data-i18n="about-me.aboutText3c"> where I've found certain technological
             stacks appealing.
-            Currently, I'm working as a solo game developer. </p>
+            Currently, I'm working as a solo game developer. </span></p>
 
-        <p>&emsp;&emsp;You can reach out to me at
+        <p>&emsp;&emsp;<span data-i18n="about-me.aboutText4a">You can reach out to me at</span>
             <a class="link-text" href="mailto:tigran.sargsyan.w@gmail.com"
                target="_blank">tigran.sargsyan.w@gmail.com</a>
-            or <a class="link-text" href="contacts" target="_blank">here.</a></p>
+            <span data-i18n="about-me.aboutText4b">or</span> <a class="link-text" data-i18n="about-me.aboutText4Link" href="contacts" target="_blank">here.</a></p>
     </div>
 </section>
 
@@ -108,8 +115,8 @@
 <section class="project-container container" id="Education">
     <div class="division"></div>
     <div class="content-text">
-        <h2>Education</h2>
-        <p>Check out my education</p>
+        <h2 data-i18n="about-me.educationTitle">Education</h2>
+        <p data-i18n="about-me.educationSubtitle">Check out my education</p>
     </div>
     <section class="project-container container" id="timeline-my">
         <div class="content-text">
@@ -125,8 +132,8 @@
 <section class="project-container container" id="Experience">
     <div class="division"></div>
     <div class="content-text">
-        <h2>Experience</h2>
-        <p>Check out my experience</p>
+        <h2 data-i18n="about-me.experienceTitle">Experience</h2>
+        <p data-i18n="about-me.experienceSubtitle">Check out my experience</p>
         <section class="project-container container" id="timeline-mys">
             <div class="content-text">
                 <div class="timeline">
@@ -141,12 +148,12 @@
 <section class="project-container container" id="Skills">
     <div class="division"></div>
     <div class="content-text">
-        <h2>Skills</h2>
-        <p>Check out some of my skills</p>
+        <h2 data-i18n="about-me.skillsTitle">Skills</h2>
+        <p data-i18n="about-me.skillsSubtitle">Check out some of my skills</p>
         <section class="skills">
             <ul id="skills-categories-container" class="skills-categories-list"></ul>
 
-            <h3 style="text-align: start">Languages</h3>
+            <h3 data-i18n="about-me.skillsLanguagesTitle" style="text-align: start">Languages</h3>
             <ul id="languages-container" class="languages-list"></ul>
         </section>
     </div>
@@ -156,8 +163,8 @@
 <section class="project-container container" id="certificates">
     <div class="division"></div>
     <div class="content-text">
-        <h2>Certificates</h2>
-        <p>Check out some of my certificates</p>
+        <h2 data-i18n="about-me.certificatesTitle">Certificates</h2>
+        <p data-i18n="about-me.certificatesSubtitle">Check out some of my certificates</p>
     </div>
     <!-- Slideshow container / Certificates -->
     <div class="slideshow-container"></div>
@@ -170,29 +177,29 @@
 <section class="project-container container" id="hobby">
     <div class="division"></div>
     <div class="content-text">
-        <h2>Hobby</h2>
-        <p>Check out some of my hobbies</p>
+        <h2 data-i18n="about-me.hobbyTitle">Hobby</h2>
+        <p data-i18n="about-me.hobbySubtitle">Check out some of my hobbies</p>
     </div>
     <div>
-        <h2 style="margin-top: 10px;">I &#10084; Video games</h2>
-        <p>Love playing them, watching them, talking about them, studying them, watching studies about them, designing
+        <h2 data-i18n="about-me.hobbyVideoGamesTitle" style="margin-top: 10px;">I &#10084; Video games</h2>
+        <p data-i18n="about-me.hobbyVideoGamesText">Love playing them, watching them, talking about them, studying them, watching studies about them, designing
             them.&#128377;&#65039;</p>
-        <h2 style="margin-top: 10px;">I &#128153; Cinema</h2>
-        <p>I adore genres like fantasy, science fiction, action, adventure, comedy, detective, but I also
+        <h2 data-i18n="about-me.hobbyCinemaTitle" style="margin-top: 10px;">I &#128153; Cinema</h2>
+        <p data-i18n="about-me.hobbyCinemaText1">I adore genres like fantasy, science fiction, action, adventure, comedy, detective, but I also
             watch a variety of other genres.</p>
-        <p>Also enjoy series such as Breaking Bad, Sherlock, Mr. Robot, Suits,
+        <p data-i18n="about-me.hobbyCinemaText2">Also enjoy series such as Breaking Bad, Sherlock, Mr. Robot, Suits,
             Better Call Saul, 9-1-1, Rick and Morty, House, and much more.&#127909;</p>
-        <h2 style="margin-top: 10px;">I &#128155; Reading</h2>
-        <p>I enjoy reading technical literature, sci-fi, fantasy, novellas, and comics.&#128212;</p>
-        <h2 style="margin-top: 10px;">I &#128154; Music</h2>
-        <p>I consider myself a music enthusiast and enjoy listening to a wide variety of genres.
+        <h2 data-i18n="about-me.hobbyReadingTitle" style="margin-top: 10px;">I &#128155; Reading</h2>
+        <p data-i18n="about-me.hobbyReadingText">I enjoy reading technical literature, sci-fi, fantasy, novellas, and comics.&#128212;</p>
+        <h2 data-i18n="about-me.hobbyMusicTitle" style="margin-top: 10px;">I &#128154; Music</h2>
+        <p data-i18n="about-me.hobbyMusicText">I consider myself a music enthusiast and enjoy listening to a wide variety of genres.
             From rock and pop to electronic and classical, I appreciate diverse styles and sounds.
             I also have a passion for singing, although my neighbors do not approve of it.&#128517;</p>
-        <h2 style="margin-top: 10px;">I &#128156; Trips</h2>
-        <p>Armenia, France, Germany, Greece, Poland, Spain, Italy, Georgia ... Hopefully the list will
+        <h2 data-i18n="about-me.hobbyTripsTitle" style="margin-top: 10px;">I &#128156; Trips</h2>
+        <p data-i18n="about-me.hobbyTripsText">Armenia, France, Germany, Greece, Poland, Spain, Italy, Georgia ... Hopefully the list will
             grow.&#128522;</p>
-        <h2 style="margin-top: 10px;">I &#129505; Photography</h2>
-        <p>Enjoy capturing moments and exploring different perspectives through the lens.
+        <h2 data-i18n="about-me.hobbyPhotographyTitle" style="margin-top: 10px;">I &#129505; Photography</h2>
+        <p data-i18n="about-me.hobbyPhotographyText">Enjoy capturing moments and exploring different perspectives through the lens.
             Whether it's landscapes, portraits, or street photography, I find joy in documenting the world around me.&#128247;</p>
     </div>
 </section>
@@ -224,12 +231,13 @@
                         width="150px"/></a>
         </div>
         <p> &copy; Tigran Sargsyan <span id="datee"></span></p>
-        <p>All content and trademarks property of their respective owners.</p>
+        <p data-i18n="footer.trademarks">All content and trademarks property of their respective owners.</p>
     </div>
 </footer>
 
 <!-- Scripts -->
 <script defer src="js/script.js"></script>
+<script defer src="js/i18n.js"></script>
 <script defer src="js/loadEducation.js"></script>
 <script defer src="js/loadExperience.js"></script>
 <script defer src="js/loadSkills.js"></script>

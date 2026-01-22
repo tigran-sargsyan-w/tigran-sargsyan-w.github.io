@@ -115,6 +115,28 @@ body {
   margin-right: 1.5rem;
 }
 
+.navbar .lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-right: 0.5rem;
+}
+
+.navbar .lang-btn {
+  background: transparent;
+  border: 1px solid var(--bg-secondary);
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar .lang-btn:hover,
+.navbar .lang-btn:focus {
+  background: var(--bg-secondary);
+}
+
 .fas.fa-arrow-right {
   margin-left: 0.5rem;
   font-size: 0.9rem;
@@ -341,6 +363,12 @@ body {
 
   .nav-menu li {
     margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  .nav-menu .lang-switch {
+    justify-content: flex-start;
+    flex-wrap: wrap;
     width: 100%;
   }
 
