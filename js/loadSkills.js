@@ -1,7 +1,8 @@
 (() => {
 	"use strict";
 
-	const SKILLS_ENDPOINT = 'data/skills.json';
+	const lang = window.APP_LANG || 'en';
+	const SKILLS_ENDPOINT = `data/${lang}/skills.json`;
 	const CATEGORY_CLASS_NAMES = [
 		'programming-dev',
 		'project-management',
