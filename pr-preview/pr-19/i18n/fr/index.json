@@ -1,0 +1,22 @@
+{
+  "index.title": "Tigran Sargsyan - Portfolio",
+  "index.greeting": "Salut, je suis Tigran",
+  "index.intro": "Développeur logiciel passionné, capable de créer des programmes de jeu et hors jeu, des mécaniques, etc., en combinant maîtrise du code et principes de design. À l'aise en C# et Unity, avec un engagement constant à suivre les avancées du secteur. Esprit collaboratif, doté de compétences en communication, dédié à offrir des expériences immersives et de haute qualité qui captivent le public. Avec un œil attentif au détail et un goût pour l'innovation, je cherche à repousser les limites des expériences interactives, en veillant à ce que chaque projet soit techniquement solide et artistiquement convaincant. Engagé à favoriser une culture de créativité et d'excellence, je m'épanouis dans des équipes dynamiques où les idées prennent vie.",
+  "index.skillsOverviewTitle": "Bref aperçu de mes compétences :",
+  "index.skill1": "• Expertise technique en C# et Unity",
+  "index.skill2": "• Compréhension des mécaniques de jeu et hors jeu et de la programmation",
+  "index.skill3": "• Compréhension et utilisation de OOP, SOLID, GoF, VCS",
+  "index.skill4": "• Concevoir et maintenir un code efficace, réutilisable et sûr",
+  "index.skill5": "• Solides compétences en communication",
+  "index.skill6": "• Esprit d'équipe efficace",
+  "index.moreAboutMeHint": "Si vous voulez en savoir plus sur moi, cliquez sur le bouton ci-dessous.",
+  "index.projectsTitle": "Projets",
+  "index.projectsDescription": "Mon portfolio couvre différents genres de jeux, notamment hyper-casual, casual, plateformes, arcades, puzzles, narration et autres. J'ai aussi participé à des projets liés à la réalité augmentée (AR) et à la vision par ordinateur, montrant des compétences en développement gaming et non-gaming.",
+  "index.allProjectsBtn": "Tous les projets",
+  "index.moreProjectsHint": "Si vous voulez voir plus de projets, cliquez sur le bouton ci-dessous.",
+  "index.contactsTitle": "Contacts",
+  "index.contactsIntro": "N'hésitez pas à me contacter pour toute opportunité :",
+  "index.allContactsBtn": "Tous les contacts",
+  "index.moreContactsHint": "Si vous voulez voir plus d'informations de contact, cliquez sur le bouton ci-dessous.",
+  "index.moreAboutMeBtn": "En savoir plus sur moi"
+}
