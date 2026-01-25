@@ -83,7 +83,7 @@
     location.reload();
   };
 
-  const applyLanguageSwitcher = (languages, currentLang) => {
+  const applyLanguageSwitcher = (languages, currentLang, dict = {}) => {
     const containers = document.querySelectorAll("[data-lang-switcher]");
     if (!containers.length) {
       return;
@@ -96,7 +96,11 @@
         button.className = "lang-btn";
         button.type = "button";
         button.dataset.lang = language.code;
-        button.textContent = language.label;
+        const translatedLabel =
+          typeof dict[`lang.${language.code}`] === "string"
+            ? dict[`lang.${language.code}`]
+            : language.label;
+        button.textContent = translatedLabel;
         if (language.code === currentLang) {
           button.setAttribute("aria-current", "true");
         }
@@ -165,8 +169,8 @@
     document.documentElement.lang = lang;
     console.info("[i18n] lang=", lang, "page=", page);
 
-    applyLanguageSwitcher(languages, lang);
     await applyTranslations(lang, page);
+    applyLanguageSwitcher(languages, lang, window.I18N_DICT || {});
   };
 
   initI18n();
