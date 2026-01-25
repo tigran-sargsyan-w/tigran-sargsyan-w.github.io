@@ -1,5 +1,15 @@
 (() => {
   const supportedLangs = ["en", "fr", "ru"];
+  const localeMap = {
+    en: "en",
+    fr: "fr",
+    ru: "ru",
+  };
+  const presentLabels = {
+    en: "Present",
+    fr: "Présent",
+    ru: "Наст. время",
+  };
 
   const getLang = () => {
     const storedLang = localStorage.getItem("lang");
@@ -27,6 +37,14 @@
 
   const lang = getLang();
   window.APP_LANG = lang;
+  window.I18N_CONFIG = {
+    localeMap,
+    presentLabels,
+  };
+  window.getLocaleFromLang = (value = lang) =>
+    localeMap[value] || localeMap.en;
+  window.getPresentLabel = (value = lang) =>
+    presentLabels[value] || presentLabels.en;
   const page = document.body?.dataset?.page || "index";
   document.documentElement.lang = lang;
   console.info("[i18n] lang=", lang, "page=", page);
