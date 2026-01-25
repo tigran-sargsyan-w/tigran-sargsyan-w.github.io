@@ -3,22 +3,10 @@
 
     const lang = window.APP_LANG || 'en';
     const EXPERIENCE_ENDPOINT = `data/${lang}/experience.json`;
-    const PRESENT_LABELS = {
-        en: 'Present',
-        fr: 'Présent',
-        ru: 'Наст. время',
-    };
-
-    const getLocaleFromLang = () => {
-        const currentLang = window.APP_LANG || 'en';
-        const localeMap = {
-            en: 'en',
-            fr: 'fr',
-            ru: 'ru',
-        };
-
-        return localeMap[currentLang] || 'en';
-    };
+    const getLocaleFromLang = () =>
+        window.getLocaleFromLang ? window.getLocaleFromLang() : (window.APP_LANG || 'en');
+    const getPresentLabel = () =>
+        window.getPresentLabel ? window.getPresentLabel() : 'Present';
 
     const isPresentValue = (value) => typeof value === 'string' && value.toLowerCase() === 'present';
 
@@ -28,7 +16,7 @@
         }
 
         if (isPresentValue(value)) {
-            return PRESENT_LABELS[window.APP_LANG || 'en'] || PRESENT_LABELS.en;
+            return getPresentLabel();
         }
 
         if (typeof value !== 'string') {
