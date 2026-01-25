@@ -1,0 +1,23 @@
+{
+  "nav.projects": "PROJECTS",
+  "nav.contacts": "CONTACTS",
+  "nav.resume": "RESUME",
+  "lang.en": "English",
+  "lang.fr": "French",
+  "lang.ru": "Russian",
+  "ui.website": "Website",
+  "ui.stackLabel": "Stack",
+  "nav.about": "À PROPOS DE MOI",
+  "footer.trademarks": "Tous les contenus et marques déposées appartiennent à leurs propriétaires respectifs.",
+  "ui.showMore": "Afficher plus",
+  "ui.showLess": "Montrer moins",
+  "ui.invalidDates": "Dates non valides",
+  "ui.duration.year": "Année {count}",
+  "ui.duration.years": "{count} ans",
+  "ui.duration.month": "mois {count}",
+  "ui.duration.months": "{count} mois",
+  "ui.loadError.education": "Impossible de charger l'éducation pour le moment.",
+  "ui.loadError.experience": "Impossible de charger l'expérience pour le moment.",
+  "ui.loadError.skills": "Impossible de charger les compétences pour le moment.",
+  "ui.loadError.languages": "Impossible de charger les langues pour le moment."
+}

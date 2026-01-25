@@ -1,0 +1,23 @@
+{
+  "nav.projects": "PROJECTS",
+  "nav.contacts": "CONTACTS",
+  "nav.resume": "RESUME",
+  "lang.en": "English",
+  "lang.fr": "French",
+  "lang.ru": "Russian",
+  "ui.website": "Website",
+  "ui.stackLabel": "Stack",
+  "nav.about": "ОБО МНЕ",
+  "footer.trademarks": "Все материалы и торговые марки являются собственностью их владельцев.",
+  "ui.showMore": "Показать еще",
+  "ui.showLess": "Показать меньше",
+  "ui.invalidDates": "Неверные даты",
+  "ui.duration.year": "{счет} год",
+  "ui.duration.years": "{счет} лет",
+  "ui.duration.month": "{счет} месяц",
+  "ui.duration.months": "{счет} месяцев",
+  "ui.loadError.education": "В настоящее время невозможно загрузить образование.",
+  "ui.loadError.experience": "Невозможно загрузить опыт в данный момент.",
+  "ui.loadError.skills": "В данный момент не удается загрузить навыки.",
+  "ui.loadError.languages": "В данный момент не удается загрузить языки."
+}
