@@ -25,6 +25,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 0
 
       - name: Setup Node
@@ -57,13 +58,18 @@ jobs:
         run: node scripts/i18n-sync.mjs
 
       - name: Commit translations
+        if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
         run: |
           if git status --porcelain | grep -E '\.auto\.json$' >/dev/null; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add i18n/*/*.auto.json data/*/*.auto.json
             git commit -m "chore: sync i18n auto translations"
-            git push
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              git push origin HEAD:${{ github.head_ref }}
+            else
+              git push origin HEAD:${{ github.ref_name }}
+            fi
           else
             echo "No auto translations to commit."
           fi
