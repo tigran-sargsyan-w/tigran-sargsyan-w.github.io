@@ -1,0 +1,23 @@
+{
+  "nav.about": "ABOUT ME",
+  "nav.projects": "PROJECTS",
+  "nav.contacts": "CONTACTS",
+  "nav.resume": "RESUME",
+  "lang.en": "English",
+  "lang.fr": "French",
+  "lang.ru": "Russian",
+  "footer.trademarks": "All content and trademarks property of their respective owners.",
+  "ui.showMore": "Show More",
+  "ui.showLess": "Show Less",
+  "ui.website": "Website",
+  "ui.stackLabel": "Stack",
+  "ui.invalidDates": "Invalid dates",
+  "ui.duration.year": "{count} year",
+  "ui.duration.years": "{count} years",
+  "ui.duration.month": "{count} month",
+  "ui.duration.months": "{count} months",
+  "ui.loadError.education": "Unable to load education at this time.",
+  "ui.loadError.experience": "Unable to load experience at this time.",
+  "ui.loadError.skills": "Unable to load skills at this time.",
+  "ui.loadError.languages": "Unable to load languages at this time."
+}
