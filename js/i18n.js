@@ -79,6 +79,16 @@
     };
 
     console.info("[i18n] loaded keys", Object.keys(dict).length);
+    window.I18N_DICT = dict;
+    window.getI18nValue = (key, fallback = "", variables = {}) => {
+      const value = typeof dict[key] === "string" ? dict[key] : fallback;
+      if (!variables || typeof variables !== "object") {
+        return value;
+      }
+      return Object.entries(variables).reduce((result, [varKey, varValue]) => {
+        return result.replaceAll(`{${varKey}}`, String(varValue));
+      }, value);
+    };
 
     const titleEl = document.querySelector("title[data-i18n]");
     if (titleEl) {
@@ -94,6 +104,7 @@
         el.textContent = dict[key];
       }
     });
+    document.dispatchEvent(new CustomEvent("i18n:loaded"));
   };
 
   applyTranslations();

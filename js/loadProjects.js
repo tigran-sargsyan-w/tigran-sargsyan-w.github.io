@@ -101,6 +101,17 @@
         }
 
         let isExpanded = false;
+        const getToggleLabel = (expanded) => {
+            const translate = window.getI18nValue;
+            const labelKey = expanded ? "ui.showLess" : "ui.showMore";
+            const fallback = expanded ? "Show Less" : "Show More";
+            const text = typeof translate === "function" ? translate(labelKey, fallback) : fallback;
+            return `${text} <i class="fas fa-arrow-right"></i>`;
+        };
+
+        const updateToggleLabel = () => {
+            button.innerHTML = getToggleLabel(isExpanded);
+        };
 
         button.addEventListener("click", () => {
             isExpanded = !isExpanded;
@@ -114,10 +125,11 @@
                 }
             });
 
-            button.innerHTML = isExpanded
-                ? 'Show Less <i class="fas fa-arrow-right"></i>'
-                : 'Show More <i class="fas fa-arrow-right"></i>';
+            updateToggleLabel();
         });
+
+        updateToggleLabel();
+        document.addEventListener("i18n:loaded", updateToggleLabel, { once: true });
     };
 
     const loadProjects = async () => {
