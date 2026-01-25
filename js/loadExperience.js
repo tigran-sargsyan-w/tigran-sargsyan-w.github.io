@@ -7,6 +7,17 @@
         window.getLocaleFromLang ? window.getLocaleFromLang() : (window.APP_LANG || 'en');
     const getPresentLabel = () =>
         window.getPresentLabel ? window.getPresentLabel() : 'Present';
+    const getI18nValue = (key, fallback, variables) => {
+        if (window.getI18nValue) {
+            return window.getI18nValue(key, fallback, variables);
+        }
+        if (!variables || typeof variables !== 'object') {
+            return fallback;
+        }
+        return Object.entries(variables).reduce((result, [varKey, varValue]) => {
+            return result.replaceAll(`{${varKey}}`, String(varValue));
+        }, fallback);
+    };
 
     const isPresentValue = (value) => typeof value === 'string' && value.toLowerCase() === 'present';
 
@@ -56,7 +67,7 @@
             : parseYearMonth(endValue);
 
         if (start.year > end.year || (start.year === end.year && start.month > end.month)) {
-            return 'Invalid dates';
+            return getI18nValue('ui.invalidDates', 'Invalid dates');
         }
 
         const monthsWorked = (end.year - start.year) * 12 + (end.month - start.month) + 1;
@@ -64,10 +75,15 @@
         if (monthsWorked > 12) {
             const years = Math.floor(monthsWorked / 12);
             const remainingMonths = monthsWorked % 12;
-            return `${years} year ${remainingMonths} months`;
+            const yearKey = years === 1 ? 'ui.duration.year' : 'ui.duration.years';
+            const monthKey = remainingMonths === 1 ? 'ui.duration.month' : 'ui.duration.months';
+            const yearLabel = getI18nValue(yearKey, `${years} year`, { count: years });
+            const monthLabel = getI18nValue(monthKey, `${remainingMonths} months`, { count: remainingMonths });
+            return `${yearLabel} ${monthLabel}`;
         }
 
-        return `${monthsWorked} months`;
+        const monthKey = monthsWorked === 1 ? 'ui.duration.month' : 'ui.duration.months';
+        return getI18nValue(monthKey, `${monthsWorked} months`, { count: monthsWorked });
     };
 
     const renderExperience = (items, container) => {
@@ -98,7 +114,8 @@
             if (Array.isArray(item.stack) && item.stack.length > 0) {
                 const stack = document.createElement('p');
                 stack.classList.add('experience-stack');
-                stack.textContent = `Stack: ${item.stack.join(', ')}`;
+                const label = getI18nValue('ui.stackLabel', 'Stack');
+                stack.textContent = `${label}: ${item.stack.join(', ')}`;
                 content.appendChild(stack);
             }
 
@@ -158,7 +175,10 @@
             })
             .catch((error) => {
                 console.error('Error loading experience data:', error);
-                container.textContent = 'Unable to load experience at this time.';
+                container.textContent = getI18nValue(
+                    'ui.loadError.experience',
+                    'Unable to load experience at this time.'
+                );
             });
     });
 })();

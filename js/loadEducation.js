@@ -7,6 +7,8 @@
         window.getLocaleFromLang ? window.getLocaleFromLang() : (window.APP_LANG || 'en');
     const getPresentLabel = () =>
         window.getPresentLabel ? window.getPresentLabel() : 'Present';
+    const getI18nValue = (key, fallback, variables) =>
+        window.getI18nValue ? window.getI18nValue(key, fallback, variables) : fallback;
 
     const formatMonthYear = (value) => {
         if (!value) {
@@ -91,7 +93,7 @@
                 link.href = item.links.website;
                 link.target = '_blank';
                 link.rel = 'noopener noreferrer';
-                link.textContent = 'Website';
+                link.textContent = getI18nValue('ui.website', 'Website');
                 content.appendChild(link);
             }
 
@@ -133,7 +135,10 @@
             })
             .catch((error) => {
                 console.error('Error loading education data:', error);
-                container.textContent = 'Unable to load education at this time.';
+                container.textContent = getI18nValue(
+                    'ui.loadError.education',
+                    'Unable to load education at this time.'
+                );
             });
     });
 })();

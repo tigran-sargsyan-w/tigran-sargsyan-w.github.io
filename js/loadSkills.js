@@ -9,6 +9,8 @@
 		'sysadmin',
 		'communication',
 	];
+	const getI18nValue = (key, fallback, variables) =>
+		window.getI18nValue ? window.getI18nValue(key, fallback, variables) : fallback;
 
 	const createCategoryItem = (category, index) => {
 		const listItem = document.createElement('li');
@@ -115,10 +117,16 @@
 				console.error('Error loading skills data:', error);
 
 				if (categoriesContainer) {
-					categoriesContainer.textContent = 'Unable to load skills at this time.';
+					categoriesContainer.textContent = getI18nValue(
+						'ui.loadError.skills',
+						'Unable to load skills at this time.'
+					);
 				}
 				if (languagesContainer) {
-					languagesContainer.textContent = 'Unable to load languages at this time.';
+					languagesContainer.textContent = getI18nValue(
+						'ui.loadError.languages',
+						'Unable to load languages at this time.'
+					);
 				}
 			});
 	});
