@@ -1,53 +1,10 @@
 (() => {
-  const supportedLangs = ["en", "fr", "ru"];
-  const localeMap = {
-    en: "en",
-    fr: "fr",
-    ru: "ru",
+  const DEFAULT_LANG = "en";
+  const CONFIG_URL = "i18n/config.json";
+  const langCache = {
+    supportedLangs: [],
+    localeMap: {},
   };
-  const presentLabels = {
-    en: "Present",
-    fr: "Présent",
-    ru: "Наст. время",
-  };
-
-  const getLang = () => {
-    const storedLang = localStorage.getItem("lang");
-    if (storedLang && supportedLangs.includes(storedLang)) {
-      return storedLang;
-    }
-
-    const browserLang = (navigator.language || "").slice(0, 2).toLowerCase();
-    if (supportedLangs.includes(browserLang)) {
-      return browserLang;
-    }
-
-    return "en";
-  };
-
-  const setLang = (lang) => {
-    if (!supportedLangs.includes(lang)) {
-      return;
-    }
-    localStorage.setItem("lang", lang);
-    location.reload();
-  };
-
-  window.setLanguage = setLang;
-
-  const lang = getLang();
-  window.APP_LANG = lang;
-  window.I18N_CONFIG = {
-    localeMap,
-    presentLabels,
-  };
-  window.getLocaleFromLang = (value = lang) =>
-    localeMap[value] || localeMap.en;
-  window.getPresentLabel = (value = lang) =>
-    presentLabels[value] || presentLabels.en;
-  const page = document.body?.dataset?.page || "index";
-  document.documentElement.lang = lang;
-  console.info("[i18n] lang=", lang, "page=", page);
 
   const loadJson = async (url, allowNotFound = false) => {
     try {
@@ -66,7 +23,90 @@
     }
   };
 
-  const applyTranslations = async () => {
+  const parseLangConfig = (config) => {
+    if (!config || !Array.isArray(config.languages)) {
+      return {
+        supportedLangs: [DEFAULT_LANG],
+        localeMap: { [DEFAULT_LANG]: DEFAULT_LANG },
+        languages: [
+          { code: DEFAULT_LANG, label: "English", locale: DEFAULT_LANG },
+        ],
+      };
+    }
+
+    const languages = config.languages
+      .filter((lang) => lang && typeof lang.code === "string")
+      .map((lang) => ({
+        code: lang.code,
+        label: lang.label || lang.code.toUpperCase(),
+        locale: lang.locale || lang.code,
+      }));
+
+    if (languages.length === 0) {
+      return {
+        supportedLangs: [DEFAULT_LANG],
+        localeMap: { [DEFAULT_LANG]: DEFAULT_LANG },
+        languages: [
+          { code: DEFAULT_LANG, label: "English", locale: DEFAULT_LANG },
+        ],
+      };
+    }
+
+    const supportedLangs = languages.map((lang) => lang.code);
+    const localeMap = languages.reduce((acc, lang) => {
+      acc[lang.code] = lang.locale || lang.code;
+      return acc;
+    }, {});
+
+    return { supportedLangs, localeMap, languages };
+  };
+
+  const getLang = (supportedLangs) => {
+    const storedLang = localStorage.getItem("lang");
+    if (storedLang && supportedLangs.includes(storedLang)) {
+      return storedLang;
+    }
+
+    const browserLang = (navigator.language || "").slice(0, 2).toLowerCase();
+    if (supportedLangs.includes(browserLang)) {
+      return browserLang;
+    }
+
+    return DEFAULT_LANG;
+  };
+
+  const setLang = (lang) => {
+    if (!langCache.supportedLangs.includes(lang)) {
+      return;
+    }
+    localStorage.setItem("lang", lang);
+    location.reload();
+  };
+
+  const applyLanguageSwitcher = (languages, currentLang) => {
+    const containers = document.querySelectorAll("[data-lang-switcher]");
+    if (!containers.length) {
+      return;
+    }
+
+    containers.forEach((container) => {
+      container.innerHTML = "";
+      languages.forEach((language) => {
+        const button = document.createElement("button");
+        button.className = "lang-btn";
+        button.type = "button";
+        button.dataset.lang = language.code;
+        button.textContent = language.label;
+        if (language.code === currentLang) {
+          button.setAttribute("aria-current", "true");
+        }
+        button.addEventListener("click", () => setLang(language.code));
+        container.appendChild(button);
+      });
+    });
+  };
+
+  const applyTranslations = async (lang, page) => {
     const common = await loadJson(`i18n/${lang}/common.json`);
     if (!common) {
       return;
@@ -75,7 +115,7 @@
     const pageDict = await loadJson(`i18n/${lang}/${page}.json`, true);
     const dict = {
       ...common,
-      ...(pageDict || {})
+      ...(pageDict || {}),
     };
 
     console.info("[i18n] loaded keys", Object.keys(dict).length);
@@ -107,5 +147,27 @@
     document.dispatchEvent(new CustomEvent("i18n:loaded"));
   };
 
-  applyTranslations();
+  const initI18n = async () => {
+    const config = await loadJson(CONFIG_URL, true);
+    const { supportedLangs, localeMap, languages } = parseLangConfig(config);
+    langCache.supportedLangs = supportedLangs;
+    langCache.localeMap = localeMap;
+    window.I18N_CONFIG = {
+      localeMap,
+      languages,
+    };
+
+    const lang = getLang(supportedLangs);
+    window.APP_LANG = lang;
+    window.getLocaleFromLang = (value = lang) =>
+      localeMap[value] || localeMap[DEFAULT_LANG] || DEFAULT_LANG;
+    const page = document.body?.dataset?.page || "index";
+    document.documentElement.lang = lang;
+    console.info("[i18n] lang=", lang, "page=", page);
+
+    applyLanguageSwitcher(languages, lang);
+    await applyTranslations(lang, page);
+  };
+
+  initI18n();
 })();
