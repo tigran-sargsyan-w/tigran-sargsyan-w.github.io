@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Master-Student",
+    "company": "Yerevan State University",
+    "start": "2019-04",
+    "end": "2022-01",
+    "tasks": [
+      "Pursued a postgraduate degree in diplomacy, focusing on international relations, foreign policy",
+      "My area of specialization within the field of diplomacy was conflict resolution, economic/cultural/public diplomacy",
+      "Conducted research and analysis, which involved writing a thesis or dissertation and engaging in smaller research projects.",
+      "Also developed skills in critical thinking, problem-solving, communication, negotiation"
+    ]
+  },
+  {
+    "title": "Linux Specialist",
+    "company": "Arm",
+    "start": "2021-05",
+    "end": "2022-01",
+    "tasks": [
+      "Gained a deep understanding of Unix-based operating system fundamentals, network protocols, services, and security concepts, access control, authentication, encryption, and vulnerability management",
+      "Learned how to configure, manage, and maintain Linux/Windows systems, including installation, patching, updating, and monitoring, how to deploy and manage Unix-based and Windows virtual machines",
+      "Developed skills in shell scripting to automate tasks, including manipulating files, parsing text, and scheduling jobs.",
+      "Developed collaboration skills to work effectively with team members, communicate technical information, and document my work."
+    ]
+  },
+  {
+    "title": "Unity Developer",
+    "company": "Freelance",
+    "start": "2022-01",
+    "end": "2022-06",
+    "tasks": [
+      "Developed and maintained Unity-based games for clients",
+      "Design game mechanics, and implement features using Unity and C# for mobile devices.",
+      "Testing and debugging of game mechanics"
+    ]
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Balaganov Rocks",
+    "start": "2022-07",
+    "end": "2023-04",
+    "tasks": [
+      "Designed and implemented interactive 3D environments, games or simulations using Unity game engine and programming language C#",
+      "Implemented game mechanics, physics, user interfaces, and other features using Unity's built-in tools and frameworks, as well as custom scripts and plugins.",
+      "Optimized game performance and user experience by implementing efficient code, designing intuitive UI, and integrating third-party libraries and services.",
+      "Troubleshot and debugged issues related to game logic, physics, networking, input, and other areas, using different debugging tools",
+      "Maintained code quality and consistency by following coding conventions"
+    ]
+  },
+  {
+    "title": "Master-Student",
+    "company": "National Polytechnic University of Armenia",
+    "start": "2022-09",
+    "end": "2025-01",
+    "tasks": [
+      "Pursuing a postgraduate degree in Information Technology, focusing on software development, data analysis, cybersecurity, information systems, networks, computing and software developing.",
+      "Specializing in various aspects of IT, including software engineering, database management, and network security.",
+      "Learning technologies and additional skills in programming, ds, algorithms, os, mobile developing, database management, cybersecurity, data analysis, system architecture, network administration and project management.",
+      "Developing skills in programming, problem-solving, project management, and teamwork."
+    ]
+  },
+  {
+    "title": "Unity Developer",
+    "company": "Freelance",
+    "start": "2023-04",
+    "end": "Present",
+    "tasks": [
+      "Collaborating with designers, artists, and other developers to designing and developing Unity-based applications and games",
+      "Staying up-to-date with the latest trends and advancements in Unity game development.",
+      "Continuously improving my skills and knowledge in Unity game development by attending training sessions, online courses, and workshops"
+    ]
+  }
+]
