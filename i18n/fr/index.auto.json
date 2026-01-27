@@ -1,0 +1,22 @@
+{
+  "index.title": "Tigran Sargsyan - Portfolio",
+  "index.greeting": "Bonjour, je suis Tigran",
+  "index.intro": "Développeur de logiciels passionné, adepte de l'art de concevoir des programmes, des mécanismes, etc. pour les jeux et les autres activités, alliant les prouesses de la programmation aux principes de la conception. Maîtrise de C# et Unity, avec un engagement inébranlable à suivre le rythme des dernières avancées de l'industrie. Un esprit de collaboration, doté de compétences en communication, qui se consacre à la fourniture d'expériences immersives de haute qualité qui captivent et engagent le public. Doté d'un sens aigu du détail et d'un penchant pour l'innovation, je m'efforce de repousser les limites des expériences interactives, en veillant à ce que chaque projet soit non seulement solide sur le plan technique, mais aussi convaincant sur le plan artistique. Soucieuse de promouvoir une culture de la créativité et de l'excellence, je m'épanouis dans des environnements d'équipe dynamiques où les idées s'épanouissent et où les visions deviennent réalité.",
+  "index.skillsOverviewTitle": "Bref aperçu de mes compétences :",
+  "index.skill1": "- Expertise technique en C# et Unity.",
+  "index.skill2": "- Compréhension des mécanismes de jeu et de non-jeu et de la programmation",
+  "index.skill3": "- Comprendre et utiliser OOP, SOLID, GoF, VCS",
+  "index.skill4": "- Construire et soutenir un code efficace, réutilisable et sûr",
+  "index.skill5": "- Solides compétences en matière de communication",
+  "index.skill6": "- Esprit d'équipe efficace",
+  "index.moreAboutMeHint": "Si vous voulez en savoir plus sur moi, cliquez sur le bouton ci-dessous.",
+  "index.projectsTitle": "Projets",
+  "index.projectsDescription": "Mon portfolio couvre différents genres de jeux, y compris hyper-casual, casual, platformers, arcades, puzzles, storytelling, et autres. En outre, j'ai également participé à des projets liés à la réalité augmentée (AR) et à la vision par ordinateur, mettant ainsi en valeur mes compétences en matière de développement de jeux et d'autres domaines.",
+  "index.allProjectsBtn": "Tous les projets",
+  "index.moreProjectsHint": "Si vous souhaitez voir d'autres projets, cliquez sur le bouton ci-dessous.",
+  "index.contactsTitle": "Contacts",
+  "index.contactsIntro": "N'hésitez pas à me contacter pour toute opportunité :",
+  "index.allContactsBtn": "Tous les contacts",
+  "index.moreContactsHint": "Si vous souhaitez obtenir plus d'informations sur les contacts, cliquez sur le bouton ci-dessous.",
+  "index.moreAboutMeBtn": "En savoir plus sur moi"
+}
