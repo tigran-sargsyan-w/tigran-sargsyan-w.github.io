@@ -1,0 +1,81 @@
+name: i18n sync
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "i18n/en/**"
+      - "data/en/**"
+      - "i18n.deepl.config.json"
+  push:
+    branches: [main]
+    paths:
+      - "i18n/en/**"
+      - "data/en/**"
+      - "i18n.deepl.config.json"
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  i18n-sync:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Determine changed files
+        id: changes
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch origin "${{ github.base_ref }}" --depth=1
+            base="origin/${{ github.base_ref }}"
+            files=$(git diff --name-only "$base"...HEAD)
+          else
+            base="HEAD~1"
+            files=$(git diff --name-only "$base"...HEAD)
+          fi
+          echo "diff_base=$base" >> "$GITHUB_OUTPUT"
+          echo "changed_files<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$files" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: Sync translations
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+          DEEPL_ENDPOINT: ${{ secrets.DEEPL_ENDPOINT }}
+          CHANGED_FILES: ${{ steps.changes.outputs.changed_files }}
+          DIFF_BASE: ${{ steps.changes.outputs.diff_base }}
+        run: node scripts/i18n-sync.mjs
+
+      - name: Commit translations
+        if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
+        run: |
+          if git status --porcelain | grep -E '\.auto\.json$' >/dev/null; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add i18n/*/*.auto.json data/*/*.auto.json
+            git commit -m "chore: sync i18n auto translations"
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              git push origin HEAD:${{ github.head_ref }}
+              curl -sSf -X POST \
+                -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                -H "Accept: application/vnd.github+json" \
+                https://api.github.com/repos/${{ github.repository }}/actions/workflows/pr-preview.yml/dispatches \
+                -d "{\"ref\":\"${{ github.head_ref }}\"}"
+            else
+              git push origin HEAD:${{ github.ref_name }}
+            fi
+          else
+            echo "No auto translations to commit."
+          fi
