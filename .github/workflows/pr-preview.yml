@@ -1,11 +1,22 @@
 name: Deploy PR previews
 
 on:
+  workflow_run:
+    workflows: ["i18n sync"]
+    types: [completed]
   pull_request:
-    types: [opened, reopened, synchronize, closed]
+    types: [closed]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Git ref to deploy (branch or SHA)"
+        required: true
+      pr_number:
+        description: "Pull request number"
+        required: true
 
 concurrency:
-  group: preview-${{ github.ref }}
+  group: preview-${{ github.event_name == 'workflow_dispatch' && inputs.pr_number || github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -14,16 +25,20 @@ permissions:
 
 jobs:
   deploy-preview:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.ref || github.event_name == 'workflow_run' && github.event.workflow_run.head_branch || github.head_ref }}
 
       # build step wen't needed, source-dir will be "."
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
+          pull-request: ${{ github.event_name == 'workflow_dispatch' && inputs.pr_number || github.event_name == 'workflow_run' && github.event.workflow_run.pull_requests[0].number || github.event.pull_request.number }}
           source-dir: .
           preview-branch: gh-pages
           # optionally:

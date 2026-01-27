@@ -111,15 +111,19 @@
   };
 
   const applyTranslations = async (lang, page) => {
-    const common = await loadJson(`i18n/${lang}/common.json`);
-    if (!common) {
+    const commonAuto = await loadJson(`i18n/${lang}/common.auto.json`, true);
+    const commonManual = await loadJson(`i18n/${lang}/common.json`);
+    if (!commonManual) {
       return;
     }
 
-    const pageDict = await loadJson(`i18n/${lang}/${page}.json`, true);
+    const pageAuto = await loadJson(`i18n/${lang}/${page}.auto.json`, true);
+    const pageManual = await loadJson(`i18n/${lang}/${page}.json`, true);
     const dict = {
-      ...common,
-      ...(pageDict || {}),
+      ...(commonAuto || {}),
+      ...(pageAuto || {}),
+      ...commonManual,
+      ...(pageManual || {}),
     };
 
     console.info("[i18n] loaded keys", Object.keys(dict).length);
