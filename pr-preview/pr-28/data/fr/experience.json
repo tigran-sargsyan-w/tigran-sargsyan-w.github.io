@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Spécialiste Linux",
+    "company": "Arm",
+    "start": "2021-05",
+    "end": "2022-01",
+    "tasks": [
+      "Acquis une compréhension approfondie des fondamentaux des systèmes d'exploitation Unix, des protocoles réseau, des services et des concepts de sécurité, du contrôle d'accès, de l'authentification, du chiffrement et de la gestion des vulnérabilités.",
+      "Appris à configurer, gérer et maintenir des systèmes Linux/Windows, y compris l'installation, l'application de correctifs, la mise à jour et la surveillance, ainsi que le déploiement et la gestion de machines virtuelles Unix et Windows.",
+      "Développé des compétences en scripting shell pour automatiser des tâches, notamment la manipulation de fichiers, l'analyse de texte et la planification de tâches.",
+      "Développé des compétences de collaboration pour travailler efficacement avec les membres de l'équipe, communiquer des informations techniques et documenter mon travail."
+    ]
+  },
+  {
+    "title": "Développeur Unity",
+    "company": "Freelance",
+    "start": "2022-01",
+    "end": "2022-06",
+    "tasks": [
+      "Développé et maintenu des jeux basés sur Unity pour des clients.",
+      "Conçu des mécaniques de jeu et implémenté des fonctionnalités avec Unity et C# pour des appareils mobiles.",
+      "Testé et débogué les mécaniques de jeu."
+    ]
+  },
+  {
+    "title": "Ingénieur logiciel",
+    "company": "Balaganov Rocks",
+    "start": "2022-07",
+    "end": "2023-04",
+    "tasks": [
+      "Conçu et implémenté des environnements 3D interactifs, des jeux ou des simulations avec Unity et C#.",
+      "Implémenté des mécaniques de jeu, la physique, des interfaces utilisateur et d'autres fonctionnalités avec les outils et frameworks intégrés de Unity, ainsi que des scripts et plugins personnalisés.",
+      "Optimisé les performances et l'expérience utilisateur en mettant en œuvre du code efficace, en concevant une UI intuitive et en intégrant des bibliothèques et services tiers.",
+      "Diagnostiqué et corrigé des problèmes liés à la logique de jeu, la physique, le réseau, les entrées et d'autres domaines à l'aide de différents outils de débogage.",
+      "Maintenu la qualité et la cohérence du code en suivant les conventions de codage."
+    ]
+  },
+  {
+    "title": "Développeur Unity",
+    "company": "Freelance",
+    "start": "2023-04",
+    "end": "Present",
+    "tasks": [
+      "Collaboré avec des designers, des artistes et d'autres développeurs pour concevoir et développer des applications et jeux Unity.",
+      "Resté à jour sur les dernières tendances et avancées en développement de jeux Unity.",
+      "Amélioré en continu mes compétences et connaissances en développement Unity via des formations, des cours en ligne et des ateliers."
+    ]
+  }
+]

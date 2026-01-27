@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Linux Specialist",
+    "company": "Arm",
+    "start": "2021-05",
+    "end": "2022-01",
+    "tasks": [
+      "Gained a deep understanding of Unix-based operating system fundamentals, network protocols, services, and security concepts, access control, authentication, encryption, and vulnerability management",
+      "Learned how to configure, manage, and maintain Linux/Windows systems, including installation, patching, updating, and monitoring, how to deploy and manage Unix-based and Windows virtual machines",
+      "Developed skills in shell scripting to automate tasks, including manipulating files, parsing text, and scheduling jobs.",
+      "Developed collaboration skills to work effectively with team members, communicate technical information, and document my work."
+    ]
+  },
+  {
+    "title": "Unity Developer",
+    "company": "Freelance",
+    "start": "2022-01",
+    "end": "2022-06",
+    "tasks": [
+      "Developed and maintained Unity-based games for clients",
+      "Design game mechanics, and implement features using Unity and C# for mobile devices.",
+      "Testing and debugging of game mechanics"
+    ]
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Balaganov Rocks",
+    "start": "2022-07",
+    "end": "2023-04",
+    "tasks": [
+      "Designed and implemented interactive 3D environments, games or simulations using Unity game engine and programming language C#",
+      "Implemented game mechanics, physics, user interfaces, and other features using Unity's built-in tools and frameworks, as well as custom scripts and plugins.",
+      "Optimized game performance and user experience by implementing efficient code, designing intuitive UI, and integrating third-party libraries and services.",
+      "Troubleshot and debugged issues related to game logic, physics, networking, input, and other areas, using different debugging tools",
+      "Maintained code quality and consistency by following coding conventions"
+    ]
+  },
+  {
+    "title": "Unity Developer",
+    "company": "Freelance",
+    "start": "2023-04",
+    "end": "Present",
+    "tasks": [
+      "Collaborating with designers, artists, and other developers to designing and developing Unity-based applications and games",
+      "Staying up-to-date with the latest trends and advancements in Unity game development.",
+      "Continuously improving my skills and knowledge in Unity game development by attending training sessions, online courses, and workshops"
+    ]
+  }
+]

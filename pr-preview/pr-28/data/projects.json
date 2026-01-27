@@ -1,0 +1,158 @@
+{
+  "game_projects": {
+    "vertical": [
+      {
+        "title": "Gun Crusher",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/gun_crusher.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://play.google.com/store/apps/details?id=com.balaganovrocks.guncrusher"
+          }
+        ]
+      },
+      {
+        "title": "1124",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/1124.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://apkcombo.com/ru/1124-number-link-game/com.balaganovrocks.game1124/"
+          }
+        ]
+      },
+      {
+        "title": "Numbers",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/loop_number.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://apkcombo.com/loop-numbers/com.balaganovrocks.loopnumbers/"
+          }
+        ]
+      },
+      {
+        "title": "Vacuum Robbery",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/vacuum_robbery.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://apkcombo.com/vacuum-robbery/com.balaganovrocks.vacuumcleanerrobbery/"
+          }
+        ]
+      },
+      {
+        "title": "Mech Crusher",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/mech_crusher.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://apkcombo.com/mech-crusher-destruction/com.balaganovrocks.mechaguncrusher/"
+          }
+        ]
+      },
+      {
+        "title": "BlackHole.io",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/black_hole.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://play.google.com/store/apps/details?id=com.pixelcraft.blackhole"
+          }
+        ]
+      },
+      {
+        "title": "Hunter",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/hunter.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://play.google.com/store/apps/details?id=com.joybox.hunter"
+          }
+        ]
+      },
+      {
+        "title": "Run Forrest Run",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/run-forrest-run.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://play.google.com/store/apps/details?id=com.replay.runforrestrun"
+          }
+        ]
+      }
+    ],
+    "horizontal": [
+      {
+        "title": "FPS – Platformer",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/platformer.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://play.google.com/store/apps/details?id=com.leveldown.fplatformer"
+          }
+        ]
+      }
+    ]
+  },
+  "non_game_projects": {
+    "vertical": [
+      {
+        "title": "AR – Furniture",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/non-gaming/ar_furniture.gif",
+        "links": [
+          {
+            "type": "web",
+            "url": "https://play.google.com/store/apps/details?id=com.furnitureland.arfurniture"
+          }
+        ]
+      },
+      {
+        "title": "Sleepy Shine",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/non-gaming/sleepy_shine.gif",
+        "links": [
+          {
+            "type": "github",
+            "url": "https://github.com/tigran-sargsyan-w/sleepy-shine/tree/feature/flashlight"
+          }
+        ]
+      },
+      {
+        "title": "Try Before Buy",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/non-gaming/try-before-buy.gif",
+        "links": [
+          {
+            "type": "github",
+            "url": "https://github.com/tigran-sargsyan-w/try-before-buy/tree/feature/try-on-glasses"
+          }
+        ]
+      },
+      {
+        "title": "Find book",
+        "technologies": "Unity, C#",
+        "imageSrc": "assets/project/non-gaming/books.gif",
+        "links": []
+      }
+    ],
+    "horizontal": [
+      {
+        "title": "Let's Dance",
+        "technologies": "Unity, C#, Python",
+        "imageSrc": "assets/project/non-gaming/dance_cv.gif",
+        "links": []
+      }
+    ]
+  }
+}
