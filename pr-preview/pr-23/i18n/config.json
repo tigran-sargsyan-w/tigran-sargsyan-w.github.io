@@ -1,7 +1,0 @@
-{
-  "languages": [
-    { "code": "en", "label": "English", "locale": "en" },
-    { "code": "fr", "label": "French", "locale": "fr" },
-    { "code": "ru", "label": "Russian", "locale": "ru" }
-  ]
-}
