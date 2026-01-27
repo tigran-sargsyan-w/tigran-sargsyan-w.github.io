@@ -47,7 +47,7 @@ const shouldSkipTranslation = (text, skipPatterns = {}) => {
   }
   if (skipPatterns.codeLike) {
     const regex = new RegExp(skipPatterns.codeLike);
-    const hasCodeMarkers = /[0-9._\\-/]/.test(text);
+    const hasCodeMarkers = /[0-9._/\\-]/.test(text);
     if (regex.test(text) && hasCodeMarkers) {
       return true;
     }
