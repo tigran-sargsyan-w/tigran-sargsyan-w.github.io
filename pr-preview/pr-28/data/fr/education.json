@@ -41,5 +41,19 @@
       "Acquisition de technologies et de compétences supplémentaires en programmation, structures de données, algorithmes, systèmes d'exploitation, développement mobile, gestion de bases de données, cybersécurité, analyse de données, architecture système, administration réseau et gestion de projet.",
       "Développement de compétences en programmation, résolution de problèmes, gestion de projet et travail d'équipe."
     ]
+  },
+  {
+    "school": "42 Lyon (École 42)",
+    "degree": "RNCP Niveau 7",
+    "program": "Informatique (Ingénierie logicielle basée sur projets)",
+    "location": "Lyon, France",
+    "start": "2024-11",
+    "end": "Present",
+    "highlights": [
+      "Études à l'École 42 dans un environnement d'apprentissage par projets et entre pairs, axé sur l'ingénierie logicielle pratique.",
+      "Travail sur des projets de programmation intensifs mettant l'accent sur la résolution de problèmes, les algorithmes, la programmation système et la collaboration.",
+      "Construction de bases solides en C/C++, outils UNIX/Linux, débogage et architecture logicielle à travers des projets concrets.",
+      "Objectif actif d'obtenir la certification RNCP Niveau 7 via 42."
+    ]
   }
 ]

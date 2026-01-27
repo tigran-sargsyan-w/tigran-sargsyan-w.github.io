@@ -41,5 +41,19 @@
       "Learning technologies and additional skills in programming, ds, algorithms, os, mobile developing, database management, cybersecurity, data analysis, system architecture, network administration and project management.",
       "Developing skills in programming, problem-solving, project management, and teamwork."
     ]
+  },
+  {
+    "school": "42 Lyon (École 42)",
+    "degree": "RNCP Level 7 ",
+    "program": "Computer Science (Project-based Software Engineering)",
+    "location": "Lyon, France",
+    "start": "2024-11",
+    "end": "Present",
+    "highlights": [
+      "Studying at École 42 in a project-based, peer-to-peer learning environment focused on practical software engineering.",
+      "Working on intensive coding projects that emphasize problem-solving, algorithms, system programming, and collaboration.",
+      "Building strong foundations in C/C++, UNIX/Linux tooling, debugging, and software architecture through real-world assignments.",
+      "Actively aiming to obtain the RNCP Level 7 certification through the 42."
+    ]
   }
 ]
