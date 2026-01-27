@@ -1,0 +1,64 @@
+{
+  "sourceLang": "EN",
+  "targetLangs": ["FR", "RU"],
+  "ui": {
+    "sourceDir": "i18n/en",
+    "targetDir": "i18n"
+  },
+  "data": {
+    "sourceDir": "data/en",
+    "targetDir": "data",
+    "translateRules": {
+      "education.json": [
+        "$.school",
+        "$.degree",
+        "$.program",
+        "$.location",
+        "$.highlights[*]"
+      ],
+      "experience.json": [
+        "$.title",
+        "$.company",
+        "$.location",
+        "$.tasks[*]",
+        "$.summary",
+        "$.description"
+      ],
+      "skills.json": [
+        "$.categories[*].title",
+        "$.languages[*].level"
+      ]
+    }
+  },
+  "translate": {
+    "endpoint": "https://api-free.deepl.com/v2/translate",
+    "maxBatchChars": 12000
+  },
+  "protectedTerms": [
+    "Unity",
+    "C#",
+    "Git",
+    "GitHub",
+    ".NET",
+    "Android",
+    "Android Studio",
+    "Kotlin",
+    "SOLID",
+    "OOP",
+    "GoF",
+    "SDK",
+    "AR",
+    "VS Code",
+    "Linux",
+    "Windows",
+    "Bash",
+    "Python",
+    "C++",
+    "OpenGL",
+    "VCS"
+  ],
+  "skipPatterns": {
+    "urlOrEmailIndicators": ["http://", "https://", "www.", "mailto:", "@"],
+    "codeLike": "^[A-Za-z0-9._\\-/]{1,40}$"
+  }
+}

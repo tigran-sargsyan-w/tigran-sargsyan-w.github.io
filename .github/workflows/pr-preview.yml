@@ -3,6 +3,14 @@ name: Deploy PR previews
 on:
   pull_request:
     types: [opened, reopened, synchronize, closed]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Git ref to deploy (branch or SHA)"
+        required: true
+      pr_number:
+        description: "Pull request number"
+        required: true
 
 concurrency:
   group: preview-${{ github.ref }}
@@ -18,12 +26,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.ref || github.head_ref }}
 
       # build step wen't needed, source-dir will be "."
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
+          pull-request: ${{ github.event_name == 'workflow_dispatch' && inputs.pr_number || github.event.pull_request.number }}
           source-dir: .
           preview-branch: gh-pages
           # optionally:
