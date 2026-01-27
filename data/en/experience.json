@@ -1,17 +1,5 @@
 [
   {
-    "title": "Master-Student",
-    "company": "Yerevan State University",
-    "start": "2019-04",
-    "end": "2022-01",
-    "tasks": [
-      "Pursued a postgraduate degree in diplomacy, focusing on international relations, foreign policy",
-      "My area of specialization within the field of diplomacy was conflict resolution, economic/cultural/public diplomacy",
-      "Conducted research and analysis, which involved writing a thesis or dissertation and engaging in smaller research projects.",
-      "Also developed skills in critical thinking, problem-solving, communication, negotiation"
-    ]
-  },
-  {
     "title": "Linux Specialist",
     "company": "Arm",
     "start": "2021-05",
@@ -45,18 +33,6 @@
       "Optimized game performance and user experience by implementing efficient code, designing intuitive UI, and integrating third-party libraries and services.",
       "Troubleshot and debugged issues related to game logic, physics, networking, input, and other areas, using different debugging tools",
       "Maintained code quality and consistency by following coding conventions"
-    ]
-  },
-  {
-    "title": "Master-Student",
-    "company": "National Polytechnic University of Armenia",
-    "start": "2022-09",
-    "end": "2025-01",
-    "tasks": [
-      "Pursuing a postgraduate degree in Information Technology, focusing on software development, data analysis, cybersecurity, information systems, networks, computing and software developing.",
-      "Specializing in various aspects of IT, including software engineering, database management, and network security.",
-      "Learning technologies and additional skills in programming, ds, algorithms, os, mobile developing, database management, cybersecurity, data analysis, system architecture, network administration and project management.",
-      "Developing skills in programming, problem-solving, project management, and teamwork."
     ]
   },
   {
