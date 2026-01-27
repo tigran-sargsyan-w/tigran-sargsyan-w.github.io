@@ -1,0 +1,23 @@
+{
+  "nav.about": "ОБО МНЕ",
+  "nav.projects": "ПРОЕКТЫ",
+  "nav.contacts": "КОНТАКТЫ",
+  "nav.resume": "РЕЗЮМЕ",
+  "lang.en": "Английский",
+  "lang.fr": "Французский",
+  "lang.ru": "Русский",
+  "footer.trademarks": "Все материалы и товарные знаки являются собственностью их владельцев.",
+  "ui.showMore": "Показать больше",
+  "ui.showLess": "Показать меньше",
+  "ui.website": "Сайт",
+  "ui.stackLabel": "Стек",
+  "ui.invalidDates": "Некорректные даты",
+  "ui.duration.year": "{count} год",
+  "ui.duration.years": "{count} лет",
+  "ui.duration.month": "{count} месяц",
+  "ui.duration.months": "{count} месяцев",
+  "ui.loadError.education": "Не удалось загрузить образование.",
+  "ui.loadError.experience": "Не удалось загрузить опыт работы.",
+  "ui.loadError.skills": "Не удалось загрузить навыки.",
+  "ui.loadError.languages": "Не удалось загрузить языки."
+}
