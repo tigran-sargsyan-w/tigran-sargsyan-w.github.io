@@ -5,11 +5,16 @@
       "skills": [
         "Unity",
         "C#",
+        "C",
+        "C++",
         "Git",
         "Augmented Reality (AR)",
         "Mobile game programming",
         "Unity Custom Editor",
         "Game programming",
+        "ShaderLab/HLSL",
+        "Shader Graph",
+        "Amplify Shader Editor",
         "Integrating SDK",
         "SOLID",
         "Object-Oriented programming (OOP)",
@@ -21,9 +26,16 @@
         "Android studio",
         ".NET",
         "Python",
+        "JavaScript",
+        "Shell",
         "Bash",
         "Web development",
-        "Software Engineering"
+        "Software Engineering",
+        "Debugging (GDB, Valgrind)",
+        "Profiling (Visual Studio Profiler, adb/logcat)",
+        "Sanitizers (ASan/UBSan/LSan/TSan)",
+        "RenderDoc",
+        "Unity Frame Debugger"
       ]
     },
     {
@@ -48,7 +60,8 @@
         "Windows",
         "System monitoring",
         "Network monitoring",
-        "Virtualization"
+        "Virtualization",
+        "CI/CD (GitHub Actions, GitLab CI/CD, Bitbucket Pipelines)"
       ]
     },
     {
