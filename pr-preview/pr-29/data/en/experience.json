@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Linux Specialist",
+    "company": "Arm",
+    "start": "2021-05",
+    "end": "2022-01",
+    "tasks": [
+      "Gained a deep understanding of Unix-based operating system fundamentals, network protocols, services, and security concepts (access control, authentication, encryption, and vulnerability management).",
+      "Configured, managed, and maintained Linux/Windows systems (installation, patching, updating, monitoring) and deployed/managed Unix-based and Windows virtual machines.",
+      "Automated routine tasks with shell scripting (file manipulation, text parsing, job scheduling).",
+      "Collaborated with team members, communicated technical information clearly, and documented work."
+    ]
+  },
+  {
+    "title": "Unity Developer",
+    "company": "Freelance",
+    "start": "2022-01",
+    "end": "2022-06",
+    "tasks": [
+      "Developed and maintained Unity-based games for clients.",
+      "Designed game mechanics and implemented features using Unity and C# for mobile devices.",
+      "Performed testing and debugging of gameplay and game mechanics."
+    ]
+  },
+  {
+    "title": "Software Developer (C# / Unity)",
+    "company": "Balaganov Rocks",
+    "start": "2022-07",
+    "end": "2023-09",
+    "tasks": [
+      "Designed and implemented interactive 3D environments, games, or simulations using Unity and C#.",
+      "Implemented gameplay mechanics, physics, user interfaces, and other features using Unity tools/frameworks plus custom scripts and plugins.",
+      "Optimized performance and user experience via efficient code, intuitive UI design, and integration of third-party libraries/services.",
+      "Troubleshot and debugged issues across gameplay logic, physics, networking, and input using appropriate debugging tools.",
+      "Maintained code quality and consistency by following coding conventions and best practices."
+    ]
+  },
+  {
+    "title": "Software Developer (C# / Unity)",
+    "company": "Freelance",
+    "start": "2023-07",
+    "end": "2025-04",
+    "tasks": [
+      "Delivered Unity/C# features and fixes for multiple client projects (gameplay systems, UI, tools, and integrations).",
+      "Collaborated with designers, artists, and other developers to plan, implement, and iterate on features.",
+      "Improved stability and performance through profiling, debugging, and refactoring.",
+      "Maintained clear documentation and handover notes to support client teams and long-term maintenance."
+    ]
+  },
+  {
+    "title": "Software Developer (C# / Unity)",
+    "company": "XW",
+    "start": "2025-05",
+    "end": "2026-01",
+    "tasks": [
+      "Developed and maintained Unity/C# product features within a team environment, aligning implementation with product requirements.",
+      "Built reusable systems and tooling to speed up iteration and improve developer workflow.",
+      "Integrated and maintained third-party SDKs/services, ensuring compatibility and reliability across builds.",
+      "Tracked, investigated, and resolved bugs while maintaining code quality through conventions and reviews."
+    ]
+  },
+  {
+    "title": "Software Developer (C# / Unity)",
+    "company": "Freelance",
+    "start": "2026-01",
+    "end": "Present",
+    "tasks": [
+      "Continuing freelance Unity/C# development: implementing features, fixing bugs, and improving performance across client projects.",
+      "Communicating with stakeholders to clarify requirements and deliver iterative releases.",
+      "Keeping up-to-date with Unity ecosystem changes (engine updates, tooling, performance practices) to apply improvements in ongoing work."
+    ]
+  }
+]

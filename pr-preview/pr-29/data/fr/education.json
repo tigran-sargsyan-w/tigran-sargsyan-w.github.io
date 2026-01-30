@@ -1,0 +1,59 @@
+[
+  {
+    "school": "MoD RA University",
+    "degree": "Licence",
+    "program": "Gestion des unités",
+    "location": "",
+    "start": "2014-07",
+    "end": "2019-06",
+    "highlights": [
+      "J'ai suivi une licence en sciences militaires, axée sur la stratégie, la tactique et le leadership.",
+      "Ma spécialisation en sciences militaires comprenait les opérations de combat, la technologie militaire et la politique de défense.",
+      "J'ai participé à des exercices pratiques, des simulations et du travail de terrain pour appliquer les connaissances théoriques à des situations réelles.",
+      "J'ai mené des recherches et des analyses sur des sujets militaires, aboutissant à un projet de thèse et à la participation à des travaux de recherche plus courts.",
+      "De plus, j'ai développé des compétences en leadership, prise de décision sous pression, travail d'équipe et communication efficace, essentielles en milieu militaire."
+    ]
+  },
+  {
+    "school": "Yerevan State University",
+    "degree": "Master",
+    "program": "Relations internationales",
+    "location": "",
+    "start": "2019-06",
+    "end": "2022-02",
+    "highlights": [
+      "J'ai suivi un master en diplomatie, axé sur les relations internationales et la politique étrangère.",
+      "Ma spécialisation en diplomatie portait sur la résolution des conflits et la diplomatie économique/culturelle/publique.",
+      "J'ai mené des recherches et des analyses, comprenant la rédaction d'un mémoire et la participation à des projets de recherche plus courts.",
+      "J'ai également développé des compétences en pensée critique, résolution de problèmes, communication et négociation."
+    ]
+  },
+  {
+    "school": "National Polytechnic University of Armenia",
+    "degree": "Master",
+    "program": "Technologies de l'information",
+    "location": "",
+    "start": "2022-09",
+    "end": "2025-01",
+    "highlights": [
+      "Je poursuis un master en technologies de l'information, axé sur le développement logiciel, l'analyse de données, la cybersécurité, les systèmes d'information, les réseaux, l'informatique et le développement logiciel.",
+      "Spécialisation dans divers aspects de l'IT, notamment l'ingénierie logicielle, la gestion de bases de données et la sécurité des réseaux.",
+      "Acquisition de technologies et de compétences supplémentaires en programmation, structures de données, algorithmes, systèmes d'exploitation, développement mobile, gestion de bases de données, cybersécurité, analyse de données, architecture système, administration réseau et gestion de projet.",
+      "Développement de compétences en programmation, résolution de problèmes, gestion de projet et travail d'équipe."
+    ]
+  },
+  {
+    "school": "42 Lyon (École 42)",
+    "degree": "RNCP Niveau 7",
+    "program": "Informatique (Ingénierie logicielle basée sur projets)",
+    "location": "Lyon, France",
+    "start": "2024-11",
+    "end": "Present",
+    "highlights": [
+      "Études à l'École 42 dans un environnement d'apprentissage par projets et entre pairs, axé sur l'ingénierie logicielle pratique.",
+      "Travail sur des projets de programmation intensifs mettant l'accent sur la résolution de problèmes, les algorithmes, la programmation système et la collaboration.",
+      "Construction de bases solides en C/C++, outils UNIX/Linux, débogage et architecture logicielle à travers des projets concrets.",
+      "Objectif actif d'obtenir la certification RNCP Niveau 7 via 42."
+    ]
+  }
+]

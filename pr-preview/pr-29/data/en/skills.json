@@ -1,0 +1,107 @@
+{
+  "categories": [
+    {
+      "title": "Programming & Development",
+      "skills": [
+        "Unity",
+        "C#",
+        "C",
+        "C++",
+        "Git",
+        "Augmented Reality (AR)",
+        "Mobile game programming",
+        "Unity Custom Editor",
+        "Game programming",
+        "ShaderLab/HLSL",
+        "Shader Graph",
+        "Amplify Shader Editor",
+        "Integrating SDK",
+        "SOLID",
+        "Object-Oriented programming (OOP)",
+        "Design Patterns (GoF)",
+        "Algorithms",
+        "Data Structures",
+        "Kotlin",
+        "Android development",
+        "Android Studio",
+        "Python",
+        "JavaScript",
+        "Shell",
+        "Bash",
+        "Web development",
+        "Software Engineering",
+        "Debugging (GDB, Valgrind)",
+        "Profiling (Visual Studio Profiler, adb/logcat)",
+        "Sanitizers (ASan/UBSan/LSan/TSan)",
+        "RenderDoc",
+        "Unity Frame Debugger"
+      ]
+    },
+    {
+      "title": "Project & Team Management",
+      "skills": [
+        "Tactical & Strategic thinking",
+        "Team Management",
+        "Leadership",
+        "Problem-solving",
+        "Situation analysis",
+        "Organization Skills",
+        "Planning"
+      ]
+    },
+    {
+      "title": "System Administration & Management & IT Infrastructure",
+      "skills": [
+        "System administration (Linux & Windows)",
+        "Server administration",
+        "Network administration",
+        "Linux",
+        "Windows",
+        "System monitoring",
+        "Network monitoring",
+        "Virtualization",
+        "CI/CD (GitHub Actions, GitLab CI/CD, Bitbucket Pipelines)"
+      ]
+    },
+    {
+      "title": "Interpersonal & Communication Skills",
+      "skills": [
+        "Communication",
+        "Cross-cultural competence",
+        "Negotiation & Conflict resolution",
+        "Analytical thinking",
+        "Strategic planning",
+        "Adaptability",
+        "Research skills",
+        "Multilingualism"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Armenian",
+      "level": "Native or bilingual proficiency",
+      "percent": 100
+    },
+    {
+      "name": "Russian",
+      "level": "Native or bilingual proficiency",
+      "percent": 95
+    },
+    {
+      "name": "German",
+      "level": "Limited working proficiency",
+      "percent": 65
+    },
+    {
+      "name": "English",
+      "level": "Limited working proficiency",
+      "percent": 60
+    },
+    {
+      "name": "French",
+      "level": "Elementary proficiency",
+      "percent": 15
+    }
+  ]
+}

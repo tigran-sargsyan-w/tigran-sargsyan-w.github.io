@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Spécialiste Linux",
+    "company": "Arm",
+    "start": "2021-05",
+    "end": "2022-01",
+    "tasks": [
+      "Acquis une compréhension approfondie des fondamentaux des systèmes d'exploitation Unix, des protocoles réseau, des services et des concepts de sécurité (contrôle d'accès, authentification, chiffrement et gestion des vulnérabilités).",
+      "Configuré, géré et maintenu des systèmes Linux/Windows (installation, application de correctifs, mise à jour, surveillance) et déployé/géré des machines virtuelles Unix et Windows.",
+      "Automatisé des tâches courantes avec des scripts shell (manipulation de fichiers, analyse de texte, planification de tâches).",
+      "Collaboré avec les membres de l'équipe, communiqué clairement des informations techniques et documenté le travail."
+    ]
+  },
+  {
+    "title": "Développeur Unity",
+    "company": "Freelance",
+    "start": "2022-01",
+    "end": "2022-06",
+    "tasks": [
+      "Développé et maintenu des jeux basés sur Unity pour des clients.",
+      "Conçu des mécaniques de jeu et implémenté des fonctionnalités avec Unity et C# pour des appareils mobiles.",
+      "Effectué des tests et du débogage du gameplay et des mécaniques de jeu."
+    ]
+  },
+  {
+    "title": "Développeur logiciel (C# / Unity)",
+    "company": "Balaganov Rocks",
+    "start": "2022-07",
+    "end": "2023-09",
+    "tasks": [
+      "Conçu et implémenté des environnements 3D interactifs, des jeux ou des simulations avec Unity et C#.",
+      "Implémenté des mécaniques de jeu, la physique, des interfaces utilisateur et d'autres fonctionnalités avec les outils/frameworks Unity ainsi que des scripts et plugins personnalisés.",
+      "Optimisé les performances et l'expérience utilisateur via du code efficace, une conception UI intuitive et l'intégration de bibliothèques/services tiers.",
+      "Diagnostiqué et corrigé des problèmes liés à la logique de jeu, la physique, le réseau et les entrées à l'aide d'outils de débogage appropriés.",
+      "Maintenu la qualité et la cohérence du code en suivant les conventions de codage et les bonnes pratiques."
+    ]
+  },
+  {
+    "title": "Développeur logiciel (C# / Unity)",
+    "company": "Freelance",
+    "start": "2023-07",
+    "end": "2025-04",
+    "tasks": [
+      "Livré des fonctionnalités et correctifs Unity/C# pour plusieurs projets clients (systèmes de gameplay, UI, outils et intégrations).",
+      "Collaboré avec des designers, des artistes et d'autres développeurs pour planifier, implémenter et itérer sur les fonctionnalités.",
+      "Amélioré la stabilité et les performances via le profilage, le débogage et le refactoring.",
+      "Maintenu une documentation claire et des notes de passation pour soutenir les équipes clients et la maintenance à long terme."
+    ]
+  },
+  {
+    "title": "Développeur logiciel (C# / Unity)",
+    "company": "XW",
+    "start": "2025-05",
+    "end": "2026-01",
+    "tasks": [
+      "Développé et maintenu des fonctionnalités produit Unity/C# au sein d'une équipe, en alignant l'implémentation avec les exigences produit.",
+      "Construit des systèmes et outils réutilisables pour accélérer l'itération et améliorer le flux de travail des développeurs.",
+      "Intégré et maintenu des SDK/services tiers, assurant la compatibilité et la fiabilité entre les builds.",
+      "Suivi, investigué et résolu des bugs tout en maintenant la qualité du code via des conventions et des revues."
+    ]
+  },
+  {
+    "title": "Développeur logiciel (C# / Unity)",
+    "company": "Freelance",
+    "start": "2026-01",
+    "end": "Present",
+    "tasks": [
+      "Poursuite du développement freelance Unity/C# : implémentation de fonctionnalités, correction de bugs et amélioration des performances sur les projets clients.",
+      "Communication avec les parties prenantes pour clarifier les exigences et livrer des versions itératives.",
+      "Suivi des évolutions de l'écosystème Unity (mises à jour du moteur, outils, pratiques de performance) pour appliquer les améliorations dans le travail en cours."
+    ]
+  }
+]

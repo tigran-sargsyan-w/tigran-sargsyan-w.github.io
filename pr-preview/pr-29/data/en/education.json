@@ -1,0 +1,59 @@
+[
+  {
+    "school": "MoD RA University",
+    "degree": "Bachelor's degree",
+    "program": "Units Management",
+    "location": "",
+    "start": "2014-07",
+    "end": "2019-06",
+    "highlights": [
+      "I pursued a bachelor's degree in military science, with a focus on various aspects of strategy, tactics, and leadership.",
+      "My specialization within military science included combat operations, military technology, and defense policy.",
+      "I engaged in practical training exercises, simulations, and fieldwork to apply theoretical knowledge to real-world scenarios.",
+      "I conducted research and analysis on military topics, culminating in a thesis project and participation in smaller research initiatives.",
+      "Additionally, I developed skills in leadership, decision-making under pressure, teamwork, and effective communication, all essential for success in military settings."
+    ]
+  },
+  {
+    "school": "Yerevan State University",
+    "degree": "Master's degree",
+    "program": "International relations",
+    "location": "",
+    "start": "2019-06",
+    "end": "2022-02",
+    "highlights": [
+      "Pursued a postgraduate degree in diplomacy, focusing on international relations, foreign policy.",
+      "My area of specialization within the field of diplomacy was conflict resolution, economic/cultural/public diplomacy.",
+      "Conducted research and analysis, which involved writing a thesis or dissertation and engaging in smaller research projects.",
+      "Also developed skills in critical thinking, problem-solving, communication, negotiation."
+    ]
+  },
+  {
+    "school": "National Polytechnic University of Armenia",
+    "degree": "Master's degree",
+    "program": "Information Technology",
+    "location": "",
+    "start": "2022-09",
+    "end": "2025-01",
+    "highlights": [
+      "Pursuing a postgraduate degree in Information Technology, focusing on software development, data analysis, cybersecurity, information systems, networks, computing and software developing.",
+      "Specializing in various aspects of IT, including software engineering, database management, and network security.",
+      "Learning technologies and additional skills in programming, ds, algorithms, os, mobile developing, database management, cybersecurity, data analysis, system architecture, network administration and project management.",
+      "Developing skills in programming, problem-solving, project management, and teamwork."
+    ]
+  },
+  {
+    "school": "42 Lyon (École 42)",
+    "degree": "RNCP Level 7 ",
+    "program": "Computer Science (Project-based Software Engineering)",
+    "location": "Lyon, France",
+    "start": "2024-11",
+    "end": "Present",
+    "highlights": [
+      "Studying at École 42 in a project-based, peer-to-peer learning environment focused on practical software engineering.",
+      "Working on intensive coding projects that emphasize problem-solving, algorithms, system programming, and collaboration.",
+      "Building strong foundations in C/C++, UNIX/Linux tooling, debugging, and software architecture through real-world assignments.",
+      "Actively aiming to obtain the RNCP Level 7 certification through the 42."
+    ]
+  }
+]
